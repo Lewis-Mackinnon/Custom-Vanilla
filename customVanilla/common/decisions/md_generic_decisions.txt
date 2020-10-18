@@ -592,7 +592,6 @@ war_measures = {
 
 		modifier = {
 			foreign_subversive_activites = -0.25
-			enemy_partisan_effect = -0.1
 			stability_weekly = -0.005
 		}
 
