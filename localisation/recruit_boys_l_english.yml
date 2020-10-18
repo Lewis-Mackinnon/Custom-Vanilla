@@ -1,0 +1,28 @@
+﻿l_english:
+ # Category Locislsation   
+ recruit_the_boys:0 "Reassign Military Leadership"
+ recruit_the_boys_desc:0 "With world tension as high as it is, experienced military leadership is required to ensure the security of our nation. The possibilities for assignement are limited, however, they do remain the best this nation has ever seen. Each has their own skillset and are suited to different circumstances."
+
+ # Oliver Williams
+ recruit_oliver_williams:0 "Assign Field Marshal Williams"
+ recruit_oliver_williams_desc:0 "Williams is both an expert strategist and a political leader that manages his staff personally."
+
+ # Lewis Mackinnon
+ recruit_lewis_mackinnon:0 "Assign Field Marshal Mackinnon"
+ recruit_lewis_mackinnon_desc:0 "Mackinnon efficiently manages logistics and overall battleplans allowing for extended engagements."
+
+ # Jack Farhall
+ recruit_jack_farhall:0 "Assign Field Marshal Farhall"
+ recruit_jack_farhall_desc:0 "Farhall, although considered harsher than most, is one of the best aggressive fighters known."
+
+ # Ioan Mcfarland
+ recruit_ioan_mcfarland:0 "Assign General Mcfarland"
+ recruit_ioan_mcfarland_desc:0 "Mcfarland pushes his troops above and beyond until the given task is completed."
+
+ # Ben Sewell
+ recruit_ben_sewell:0 "Assign General Sewell"
+ recruit_ben_sewell_desc:0 "Sewell utilises entirely unpredictable and seemly weak battleplans with much success."
+
+ # SKY
+ recruit_sky:0 "Assign General SKY"
+ recruit_sky_desc:0 "SKY is best known for his ability to effectively carry out naval invasion orders and secure landing sites."

@@ -1,0 +1,175 @@
+recruit_the_boys = {
+    recruit_oliver_williams = {
+        icon = generic_political_actions
+
+        cost = 40
+        fire_only_once = yes
+
+        available = {
+            threat > 0.15
+        }
+
+        complete_effect = {
+            add_war_support = 0.02
+			add_stability = -0.02
+
+            ROOT = {
+                create_field_marshal = {
+                    name = "Oliver Williams"
+                    portrait_path = "gfx/leaders/custom/custom_portrait_oliver.dds"
+                    traits = { brilliant_strategist skilled_staffer politically_connected }
+                    skill = 4 
+                    attack_skill = 3
+                    defense_skill = 3
+                    planning_skill = 4
+                    logistics_skill = 2
+                }
+            }
+		}
+    }
+
+    recruit_lewis_mackinnon = {
+        icon = generic_political_actions
+
+        cost = 50
+        fire_only_once = yes
+
+        available = {
+            threat > 0.10
+        }
+
+        complete_effect = {
+            add_war_support = 0.02
+            add_stability = -0.02
+            
+            ROOT = {
+                create_field_marshal = {
+                    name = "Lewis Mackinnon"
+                    portrait_path = "gfx/leaders/custom/custom_portrait_lewis.dds"
+                    traits = { old_guard organizer logistics_wizard }
+                    skill = 3
+                    attack_skill = 2
+                    defense_skill = 3
+                    planning_skill = 5
+                    logistics_skill = 4
+                }
+            }
+		}
+    }
+
+    recruit_jack_farhall = {
+        icon = generic_political_actions
+
+        cost = 50
+        fire_only_once = yes
+
+        available = {
+            threat > 0.2
+        }
+
+        complete_effect = {
+            add_war_support = 0.02
+            add_stability = -0.03
+            
+            ROOT = {
+                create_field_marshal = {
+                    name = "Jack Farhall"
+                    portrait_path = "gfx/leaders/custom/custom_portrait_jack.dds"
+                    traits = { old_guard harsh_leader inflexible_strategist }
+                    skill = 2
+                    attack_skill = 4
+                    defense_skill = 2
+                    planning_skill = 3
+                    logistics_skill = 1
+                }
+            }
+		}
+    }
+
+    recruit_ioan_mcfarland = {
+        icon = generic_political_actions
+
+        cost = 40
+        fire_only_once = yes
+
+        available = {
+            threat > 0.15
+        }
+
+        complete_effect = {
+            add_war_support = 0.02
+            add_stability = -0.03
+            
+            ROOT = {
+                create_corps_commander = {
+                    name = "Ioan Mcfarland"
+                    portrait_path = "gfx/leaders/ENG/Portrait_Britain_Oswald_Mosley.dds"
+                    traits = { harsh_leader politically_connected career_officer }
+                    skill = 2
+                    attack_skill = 3
+                    defense_skill = 1
+                    planning_skill = 1
+                    logistics_skill = 1
+                }
+            }
+		}
+    }
+
+    recruit_ben_sewell = {
+        icon = generic_political_actions
+
+        cost = 50
+        fire_only_once = yes
+
+        available = {
+            threat > 0.05
+        }
+
+        complete_effect = {
+            add_war_support = 0.02
+            add_stability = -0.02
+            
+            ROOT = {
+                create_corps_commander = {
+                    name = "Ben Sewell"
+                    portrait_path = "gfx/leaders/custom/custom_portrait_ben.dds"
+                    traits = { bearer_of_artillery scavenger trickster }
+                    skill = 1
+                    attack_skill = 1
+                    defense_skill = 1
+                    planning_skill = 1
+                    logistics_skill = 1
+                }
+            }
+		}
+    }
+
+    recruit_sky = {
+        icon = generic_political_actions
+
+        cost = 50
+        fire_only_once = yes
+
+        available = {
+            threat > 0.05
+        }
+
+        complete_effect = {
+            add_war_support = 0.02
+            add_stability = -0.02
+            
+            ROOT = {
+                create_corps_commander = {
+                    name = "SKY"
+                    portrait_path = "gfx/leaders/custom/custom_portrait_sky.dds"
+                    traits = { naval_invader }
+                    skill = 1
+                    attack_skill = 2
+                    defense_skill = 2
+                    planning_skill = 3
+                    logistics_skill = 2
+                }
+            }
+		}
+    }
+}
