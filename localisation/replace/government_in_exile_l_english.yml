@@ -1,0 +1,7 @@
+﻿l_english:
+ GIE_REINSTATE_DISABLED_CAPITULATED:0 "You cannot reinstate the $NAMEADJ$ government while they are §HCapitulated§!."
+ GIE_REINSTATE_ENABLED:0 "Click to reinstate the $NAMEADJ$ government."
+ GIE_REINSTATE_ENABLED_LIBERATED:0 "$NAMEDEF|H$ has been fully liberated and their §HLegitimacy§! will be reduced by $VALUE|H2$ daily. If §HLegitimacy§! reaches §H0§!, the government is automatically reinstated."
+ GIE_REINSTATE_EFFECT_DESC:0 "By reinstating the government all $NAMEADJ$ §HExiled Divisions§!, §HArmy Leaders§! and §HShips§! will be transferred back to $NAMEDEF|H$. We will no longer be able to use their §HExiled Veteran Manpower§! for §HExiled Air Wings§! and the planes will be returned to storage."
+ GIE_REINSTATE_ENABLED_EXILE_VIEWING_LIBERATED:0 "Our country has been fully liberated. §HLegitimacy§! will be reduced by $VALUE|H2$ daily. If §HLegitimacy§! reaches §H0§!, our government is automatically reinstated."
+ COUNTRYVIEW_GIE_INFO:0 "Our host ($HOSTNAMEDEF|H$) benefits from higher §HLegitimacy§!\n§HLegitimacy§! affects §HExiled Veteran Manpower§! trickle to host and regular manpower for us.\n\n§HExile Veteran Divisions§! get combat bonuses against $OCCUPIERLIST$\n     - Attack: $ATK_VS_OCCUPIER|%0+$\n     - Defence: $DEF_VS_OCCUPIER|%+0$\nAdditional bonuses when fighting on our cores:\n     - Attack: $ATK_ON_CORE|%+0$\n     - Defense: $DEF_ON_CORE|%+0$"

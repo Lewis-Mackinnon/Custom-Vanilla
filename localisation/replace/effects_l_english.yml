@@ -1,0 +1,10 @@
+﻿l_english:
+ EFFECT_EVERY_NEIGHBOR_STATE_STARTS:0 "Every neighbour state"
+ EFFECT_EVERY_NEIGHBOR_COUNTRY_STARTS:0 "Every neighbour country"
+ EFFECT_DEMILITARIZED_ZONE:0 "Becomes a demilitarised zone."
+ EFFECT_NOT_DEMILITARIZED_ZONE:0 "Will no longer be a demilitarised zone."
+ EFFECT_CHANGE_LAW_mobilization_laws:0 "Change Mobilisation Law to '$NAME|Y$' which grants ($DESC$)."
+ EFFECT_DISABLE_TEMPLATE_EDITTING:0 "Disable editing of $NAME|H$ template and training or disbanding units belongs to it"
+ EFFECT_ENABLE_TEMPLATE_EDITTING:0 "Enable editing of $NAME|H$ template and training or disbanding units belongs to it"
+ EFFECT_INIT_RESISTANCE_BY_COUNTRY:0 "Initialise Resistance Activity by $COUNTRY|H$"
+ EFFECT_INIT_RESISTANCE:0 "Initialise Resistance Activity"

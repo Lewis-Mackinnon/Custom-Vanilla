@@ -1,0 +1,7 @@
+﻿l_english:
+ INTEL_STATIC_SOURCE_BrokenCypher:1 "Decrypted Cypher: $AMOUNT|.1+%%$"
+ AIR_INTEL_WING_COUNT:0 "Total Aeroplane Count: $COUNT$"
+ AIR_MISSION_INTEL_RANGE:0 "There are $RANGE|H$ aeroplanes assigned to $MISSION|H$ mission in this region."
+ INTEL_LEDGER_FACTORIES_USED_IN_ARMOR:0 "Military Factories used in armoured equipment production: $RANGE|H%.0$"
+ INTEL_LEDGER_FACTORIES_USED_IN_AIR:0 "Military Factories used in aeroplane production: $RANGE|H%.0$"
+ CIV_LEDGER_THRESHOLD_TAKEN_FOCUSES:2 "Completed National Focusses"

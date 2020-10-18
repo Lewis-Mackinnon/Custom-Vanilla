@@ -1,0 +1,4 @@
+﻿l_english:
+ CONSTRUCTION_MINIMIZE:0 "Minimise"
+ CONSTRUCTION_MAXIMIZE:0 "§GShift+click to §Hmaximise§!"
+ CONSTRUCTION_MAPMODE_DEMILITARIZED_BLOCKED_TOOLTIP:0 "Cannot build $BUILDING|H$ in the demilitarised zone."

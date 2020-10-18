@@ -1,0 +1,3 @@
+﻿l_english:
+ TRADEVIEW_RES_NEEDED_DETAILS:0 "§TOur production lines have insufficient $RES|H$. We need $NUM|0H$ more so our production lines will operate at full speed. §!"
+ TRADE_CAN_TRADE_TOOLTIP:0 "We have a total of $TOT|H$ Civilian Factories. $VAL|H$ are used to produce Consumer Goods, leaving us with $TRADE|H$ available for trade.\n\nNote that you cannot trade away factories received from trade exports and that trading away factories will prevent them being used for construction."

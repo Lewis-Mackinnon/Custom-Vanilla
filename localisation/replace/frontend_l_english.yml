@@ -1,0 +1,7 @@
+﻿l_english:
+ FE_COOP_LABEL:0 "Co-operative"
+ FE_DIFFICULTY_HARD_TOOLTIP:1 "§L"Thirty years from now when you're sitting by your fireside with your grandson on your knee and he asks, 'What did you do in the great World War Two?' you won't have to cough and say, 'Well, your granddaddy shovelled shit in Louisiana.'"§!"
+ CUSTOM_GAME_SETTINGS_LOAD_TOOLTIP:0 "Load a previously saved set of customised game rules."
+ CUSTOM_GAME_SETTINGS_SAVE_TOOLTIP:0 "Save this set of customised game rules for future use when starting new games."
+ CUSTOM_GAME_SETTINGS_GROUP_CUSTOMIZED_TOOLTIP:0 "§HCustomised Options§!\nSome rules in this group are customised with non-default options."
+ CUSTOM_GAME_SETTINGS_REVERT_TOOLTIP:0 "Reset all customised rules back to their default options."

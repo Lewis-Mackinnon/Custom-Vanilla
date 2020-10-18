@@ -1,0 +1,13 @@
+﻿l_english:
+ alert_naval_invasion_delayed:0 "§TThere are enemy naval invasions targetting these states:§!"
+ alert_non_payed_license_instant:0 "§HNot Paid Licences§!"
+ alert_naval_battle_results_delayed_click:0 "§GClick to centre on the next result.\nClick the £mapicon_naval_battle_result_text icon in the region to read the report.\n§!"
+ alert_naval_convoy_raiding_results_delayed_click:0 "§GClick to centre on the next result.\nClick the £topbar_convoys icon in the region to read the report.\n§!"
+ alert_paused_diplomatic_actions_delayed:0 "Some of your diplomatic actions can't progress because you lack Political Power.\nConsider cancelling these actions so they don't affect your Political Power gain.\n\nAffected relations:\n$COUNTRIES$"
+ ASK_TO_COOP_TITLE:0 "Ask to Co-op"
+ ASK_TO_COOP_TITLE_DESC:0 "Are you sure you want to ask $PLAYER$ to co-op in $COUNTRY$?"
+ ALLOW_COOP_REQUEST:0 "Player Asking for Co-op"
+ ALLOW_COOP_REQUEST_DESC:0 "$PLAYER$ Is asking to join you as a Co-op partner, allow?"
+ alert_port_strike_results_delayed_click:0 "§GClick to centre on the next result.\nClick the £mapicon_port_strike_result_text icon in the region to read the report.\n§!"
+ ALERT_NO_CRYPTO_IS_BEING_DECRYPTED_TOOLTIP:0 "§RNo enemy cypher is being decrypted.§!"
+ ALERT_ENEMY_CRYPTO_IS_BROKEN_TOOLTIP:0 "You have succesfully decrypted the cypher of following countries:"

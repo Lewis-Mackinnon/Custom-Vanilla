@@ -1,0 +1,9 @@
+﻿l_english:
+ DESIGNER_ARMORED_LABEL:0 "Armoured"
+ DESIGNER_ARMORED_RATIO:0 "Armoured: $VALUE|%Y$"
+ DESIGNER_RESET_DESC:0 "Reset current changes that were done to the division template."
+ DESIGNER_SUPPORT_COLUMN_TITLE:1 "Support Companies. These are support troops that keep behind the frontline troops and help out.\n\nYou can only select one of each type. Support Companies do not affect the §YMax Speed§! of the Division (other than through terrain bonuses), and do not increase its §YCombat Width§!."
+ DESIGNER_MAIN_COLUMN_TITLE:2 "Line Battalions are your frontline troops.\n\nEach column is a Regiment of a specific base type like §YArmour§!, §YInfantry§! or §YMotorised Troops§!. The topmost type decides what else you can put in that Regiment column. The more Line Battalions you have the bigger your §YCombat Width§! and the fewer of these divisions you will be able to fit into the same battle."
+ EQUIPMENT_DESIGNER_IS_CAPITAL_SHIP_EFFECTS_TOOLTIP:0 "§HCapital Ships§! exhibit different behaviour in combat and are influenced by a different set of modifiers than other ship categories."
+ EQUIPMENT_DESIGNER_IS_SCREEN_SHIP_EFFECTS_TOOLTIP:0 "§HScreen Ships§! exhibit different behaviour in combat and are influenced by a different set of modifiers than other ship categories."
+ NAVAL_ROLE_SELECT_DESC:1 "Here you can classify your designs to organise them and allow for more specific reinforcement settings in your task force compositions."

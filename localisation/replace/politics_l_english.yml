@@ -1,0 +1,3 @@
+﻿l_english:
+ POLITICS_IDEA_CANCEL_DESC:0 "Will be cancelled if:"
+ POLITICS_STAGE_COUP_INVALIDATE:1 "\n\n§HA coup will automatically be cancelled if the target ends up in a civil war, changes to the targetted ideology or joins the same faction.§!"

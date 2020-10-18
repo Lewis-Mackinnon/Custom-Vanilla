@@ -1,0 +1,6 @@
+﻿l_english:
+ group_armor_title:0 "Armoured Battalions"
+ HAS_ARMIES_WITH_OLD_TEMPLATE:0 "§RCannot delete this Template because $AMOUNT|H$ Division(s) are transitioning from this template to new one (Waiting to receive equipment matching new template).§!"
+ TEMPLATE_PRIO_0_DESC:0 "Units with this template will receive equipment last and at lowest priority once deployed. Perfect for units set to guard bases for example."
+ CONVEYOR_GROUP_CAN_NOT_ASSIGN_NO_ORDERS_DESC:0 "Deployment should have at least one order within theatre to be assigned to any group."
+ CONVEYOR_SET_COLONIAL_LOCATION_DESC:0 "§GClick§! to set deployment location for this deployment.\n§GRight-click§! to reset location.\n§YThis is a colonial template and can be deployed only in the country of origin!§!"
