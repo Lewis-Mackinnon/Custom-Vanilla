@@ -446,11 +446,11 @@ continuous_focus_palette = {
 		icon = GFX_focus_secret_rearmament
 		
 		available = {
-			has_war_support = 0.05
+			has_war_support > 0.05
 		}
 		
 		enable = {
-			has_war_support = 0.15
+			has_war_support > 0.15
 		}
 
 		modifier = {
@@ -474,11 +474,11 @@ continuous_focus_palette = {
 		icon = GFX_goal_generic_air_fighter
 		
 		available = {
-			has_war_support = 0.05
+			has_war_support > 0.05
 		}
 		
 		enable = {
-			has_war_support = 0.15
+			has_war_support > 0.15
 		}
 
 		modifier = {
@@ -502,11 +502,11 @@ continuous_focus_palette = {
 		icon = GFX_goal_generic_amphibious_assault
 		
 		available = {
-			has_war_support = 0.05
+			has_war_support > 0.05
 		}
 
 		enable = {
-			has_war_support = 0.15
+			has_war_support > 0.15
 		}
 		
 		modifier = {
@@ -531,11 +531,11 @@ continuous_focus_palette = {
 		icon = GFX_goal_generic_cavalry
 		
 		available = {
-			has_war_support = 0.05
+			has_war_support > 0.05
 		}
 
 		enable = {
-			has_war_support = 0.15
+			has_war_support > 0.15
 		}
 		
 		modifier = {
@@ -559,12 +559,12 @@ continuous_focus_palette = {
 		icon = GFX_goal_generic_defence
 		
 		available = {
-			has_war_support = 0.65
+			has_war_support > 0.65
 			surrender_progress > 0.50
 		}
 
 		enable = {
-			has_war_support = 0.65
+			has_war_support > 0.65
 			surrender_progress > 0.50
 		}
 		
@@ -1147,8 +1147,8 @@ continuous_focus_palette = {
 		}
 
 		enable = {
-			NOT = { has_war = yes }
-			has_war_support = 0.15
+			has_war = no
+			has_war_support > 0.15
 		}
 		
 		modifier = {
