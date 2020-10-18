@@ -197,6 +197,10 @@ on_actions = {
 			news_event = { id = nuke_dropped.11 days = 1}
 			news_event = { id = nuke_dropped.12 days = 1}
 			news_event = { id = nuke_dropped.13 days = 1}
+
+			FROM = {
+				add_manpower = -100000
+			}
 		}
 		random_events = {
 			100 = nuke_dropped.0
@@ -1720,16 +1724,6 @@ on_actions = {
 				add_to_temp_variable = { comp_change = -10 }
 
 				add_compliance = comp_change
-			}
-		}
-	}
-	
-	on_nuke_drop = {
-		effect = {
-			FROM = {
-				goto_state = {
-					add_manpower = -100000
-				}
 			}
 		}
 	}
