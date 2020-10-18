@@ -1,5 +1,6 @@
 A simple mod for HOI4 that combines several features from other mods and allows for expanded gameplay. The following mods have been included and edited:
 
+* [[1.10.1] Improved Spy Slots & Upgrades](https://steamcommunity.com/sharedfiles/filedetails/?id=2008308819)
 * [Adiya's Historical Flag Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=699302152)
 * [Alternative Air Base Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=1690638578)
 * [Alternative Naval Base Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=1971294297)
