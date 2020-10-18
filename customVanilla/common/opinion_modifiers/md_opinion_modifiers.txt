@@ -1,0 +1,26 @@
+opinion_modifiers = {
+
+	national_revolt = { #special used for civil wars that are on hold and blocks faction stuff
+		value = -70
+		months = 12
+		decay = 2
+	}
+
+	sent_international_observers = {
+		value = 15
+		months = 6
+		decay = 2
+	}
+
+	accepted_refugees = {
+		value = 40
+		months = 24
+		decay = 2
+	}
+
+	condemned_us = {
+		value = -75
+		months = 48
+		decay = 2
+	}
+}
