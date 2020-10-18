@@ -16,6 +16,7 @@ A simple mod for HOI4 that combines several features from other mods and allows 
 * [Extended Government Laws](https://steamcommunity.com/sharedfiles/filedetails/?id=1835918659)
 * [Formable Nations](https://steamcommunity.com/sharedfiles/filedetails/?id=881683110)
 * [Hearts of Iron: New World Order](https://steamcommunity.com/sharedfiles/filedetails/?id=726036596)
+* [Improved Generic Focus Tree](https://steamcommunity.com/sharedfiles/filedetails/?id=2068231243)
 * [More Division Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=699735138)
 * [Peace Mid War](https://steamcommunity.com/sharedfiles/filedetails/?id=1991365787)
 * [Player-Led Peace Conferences](https://steamcommunity.com/sharedfiles/filedetails/?id=846066944)
