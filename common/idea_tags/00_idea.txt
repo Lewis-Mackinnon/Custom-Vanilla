@@ -82,6 +82,5 @@ idea_categories = {
 		
 		cost = 0
 		removal_cost = 0
-	
 	}
 }
