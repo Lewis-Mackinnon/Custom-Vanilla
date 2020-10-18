@@ -9,4 +9,4 @@ tags={
 }
 name="Custom Vanilla"
 picture="thumbnail.png"
-supported_version="1.*.*"
+supported_version="1.10.1"
