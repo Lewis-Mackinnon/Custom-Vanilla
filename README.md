@@ -11,7 +11,7 @@ A simple mod for HOI4 that combines several features from other mods and allows 
 * [Colored Events](https://steamcommunity.com/sharedfiles/filedetails/?id=1229084232)
 * [Coring States](https://steamcommunity.com/sharedfiles/filedetails/?id=853667255)
 * [Decisions & Formables Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=1327950527)
-* [Expanded Continuous Focuses]https://steamcommunity.com/sharedfiles/filedetails/?id=2086122027)
+* [Expanded Continuous Focuses](https://steamcommunity.com/sharedfiles/filedetails/?id=2086122027)
 * [Expanded National Laws](https://steamcommunity.com/sharedfiles/filedetails/?id=818974838)
 * [Extended Government Laws](https://steamcommunity.com/sharedfiles/filedetails/?id=1835918659)
 * [Formable Nations](https://steamcommunity.com/sharedfiles/filedetails/?id=881683110)
