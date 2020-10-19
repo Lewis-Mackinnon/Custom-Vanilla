@@ -1,0 +1,147 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { 
+					is_major = no
+					num_of_factories < 10
+				}
+				add_ideas = extra_minor_country_idea
+			}
+			every_country = {
+				limit = { 
+					is_major = no
+					num_of_factories > 9
+				}
+				add_ideas = minor_country_idea
+			}
+			every_country = {
+				limit = { 
+					is_major = yes
+					OR = { 
+						has_idea = minor_country_idea
+						has_idea = extra_minor_country_idea
+					}
+				}
+				remove_ideas = extra_minor_country_idea
+				remove_ideas = minor_country_idea
+			}
+			every_country = {
+				add_ideas = taxes_norm
+				add_ideas = government_norm
+				add_ideas = social_low
+				add_ideas = education_low
+				add_ideas = police_low
+				add_ideas = army_very_low
+			}
+		}
+	}
+	
+	on_daily = {
+		effect = {
+			every_country = {
+				limit = { 
+					is_major = no
+					num_of_factories < 10
+					NOT = { has_idea = extra_minor_country_idea }
+				}
+				remove_ideas = minor_country_idea
+				add_ideas = extra_minor_country_idea
+			}
+			every_country = {
+				limit = { 
+					is_major = no 
+					num_of_factories > 9
+					NOT = { has_idea = minor_country_idea }
+				}
+				remove_ideas = extra_minor_country_idea
+				add_ideas = minor_country_idea
+			}
+			every_country = {
+				limit = { 
+					is_major = yes
+					OR = { 
+						has_idea = minor_country_idea
+						has_idea = extra_minor_country_idea
+					}
+				}
+				remove_ideas = extra_minor_country_idea
+				remove_ideas = minor_country_idea
+			}
+			every_country = {
+				limit = { 
+					NOT = { 
+						has_idea = taxes_very_low
+						has_idea = taxes_low
+						has_idea = taxes_norm
+						has_idea = taxes_high
+						has_idea = taxes_very_high
+					}
+				}
+				add_ideas = taxes_norm
+			}
+			every_country = {
+				limit = { 
+					NOT = { 
+						has_idea = government_very_low
+						has_idea = government_low
+						has_idea = government_norm
+						has_idea = government_high
+						has_idea = government_very_high
+					}
+				}
+				add_ideas = government_norm
+			}
+			every_country = {
+				limit = { 
+					NOT = { 
+						has_idea = social_very_low
+						has_idea = social_low
+						has_idea = social_norm
+						has_idea = social_high
+						has_idea = social_very_high
+					}
+				}
+				add_ideas = social_low
+			}
+			every_country = {
+				limit = { 
+					NOT = { 
+						has_idea = education_very_low
+						has_idea = education_low
+						has_idea = education_norm
+						has_idea = education_high
+						has_idea = education_very_high
+					}
+				}
+				add_ideas = education_low
+			}
+			every_country = {
+				limit = { 
+					NOT = { 
+						has_idea = police_very_low
+						has_idea = police_low
+						has_idea = police_norm
+						has_idea = police_high
+						has_idea = police_very_high
+					}
+				}
+				add_ideas = police_low
+			}
+			every_country = {
+				limit = { 
+					NOT = { 
+						has_idea = army_very_low
+						has_idea = army_low
+						has_idea = army_norm
+						has_idea = army_high
+						has_idea = army_very_high
+					}
+				}
+				add_ideas = army_very_low
+			}
+		}
+	}
+	
+}

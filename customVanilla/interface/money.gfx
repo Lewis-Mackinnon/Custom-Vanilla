@@ -1,0 +1,13 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_money"
+		texturefile = "gfx/interface/money.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_budget_button"
+		texturefile = "gfx/interface/budget_button.dds"
+		noOfFrames = 2
+	}
+}
