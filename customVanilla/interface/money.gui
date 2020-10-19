@@ -2,7 +2,7 @@ guiTypes = {
 		
 	containerWindowType = {
 		name = "money_container"
-		position = { x = 1010 y = 3 }
+		position = { x = 1400 y = 3 }
 		
 		iconType ={
 			name ="money_bg"
