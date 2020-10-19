@@ -2,7 +2,7 @@ guiTypes = {
 		
 	containerWindowType = {
 		name = "money_container"
-		position = { x = 1400 y = 3 }
+		position = { x = 1450 y = 3 }
 		
 		iconType ={
 			name ="money_bg"
@@ -35,7 +35,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "budget_window"
-		position = { x = 540 y = 80 }	
+		position = { x = 0 y = 80 }	
 		size = { width=610 height=505 }
 		show_sound = open_sub_window
 		moveable = no
