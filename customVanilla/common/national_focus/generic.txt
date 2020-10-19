@@ -781,7 +781,7 @@ focus_tree = {
 				name = bomber_bonus
 				bonus = 1.0
 				uses = 2
-				category = tactical_bombers
+				category = tactical_bomber
 				category = cat_strategic_bomber
 			}
 		}

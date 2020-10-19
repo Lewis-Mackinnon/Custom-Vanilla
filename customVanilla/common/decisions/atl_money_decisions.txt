@@ -68,7 +68,7 @@ atl_money_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = atl_need_money_200_tt
-				check_variable = { money_view > 199 }
+				check_variable = { money_view > 499 }
 			}
 			NOT = {
 				custom_trigger_tooltip = {
@@ -91,7 +91,7 @@ atl_money_category = {
 		cost = 0
 		
 		complete_effect = {
-			subtract_from_variable = { money_view = 200 }
+			subtract_from_variable = { money_view = 500 }
 			custom_effect_tooltip = remove_money_200_tooltip_tt
 		}
 		
@@ -143,7 +143,7 @@ atl_money_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = atl_need_money_250_tt
-				check_variable = { money_view > 249 }
+				check_variable = { money_view > 499 }
 			}
 			NOT = {
 				custom_trigger_tooltip = {
@@ -166,7 +166,7 @@ atl_money_category = {
 		cost = 0
 		
 		complete_effect = {
-			subtract_from_variable = { money_view = 250 }
+			subtract_from_variable = { money_view = 500 }
 			custom_effect_tooltip = remove_money_250_tooltip_tt
 		}
 		
@@ -218,7 +218,7 @@ atl_money_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = atl_need_money_150_tt
-				check_variable = { money_view > 149 }
+				check_variable = { money_view > 249 }
 			}
 		}
 
@@ -229,7 +229,7 @@ atl_money_category = {
 		cost = 0
 		
 		complete_effect = {
-			subtract_from_variable = { money_view = 150 }
+			subtract_from_variable = { money_view = 250 }
 			custom_effect_tooltip = remove_money_150_tooltip_tt
 		}
 		
@@ -252,7 +252,7 @@ atl_money_category = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = atl_need_money_150_tt
-				check_variable = { money_view > 149 }
+				check_variable = { money_view > 249 }
 			}
 		}
 
@@ -263,7 +263,7 @@ atl_money_category = {
 		cost = 0
 		
 		complete_effect = {
-			subtract_from_variable = { money_view = 150 }
+			subtract_from_variable = { money_view = 250 }
 			custom_effect_tooltip = remove_money_150_tooltip_tt
 		}
 		
