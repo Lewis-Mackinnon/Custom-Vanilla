@@ -26,6 +26,7 @@ A simple mod for HOI4 that combines several features from other mods and allows 
 * [Rename Factions (with keyboard!)](https://steamcommunity.com/sharedfiles/filedetails/?id=1690642183)
 * [State Transfer Tool MP](https://steamcommunity.com/sharedfiles/filedetails/?id=1368778634)
 * [Trade Embargo Mod by PlayerHOI](https://steamcommunity.com/sharedfiles/filedetails/?id=1821550560)
+* [Unique War Names](https://steamcommunity.com/sharedfiles/filedetails/?id=2204846772)
 
 Additional features that have been developed custom for this mod are as follows:
 * **Custom Field Marshalls and Generals** that can be assigned through various decisions once different conditions are met. Each Field Marshall and General is custom to a member of our group that actively plays HOI4 and has both traits and skill levels suited to their manner of gameplay.
