@@ -1,0 +1,21 @@
+ideas = {
+	country = {
+	
+		integrated_foreign_ships = {
+			
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+
+			
+			modifier = {
+				naval_coordination = -0.05
+			}
+		}
+	}	
+}

@@ -1,0 +1,70 @@
+puppet_integrate_navies = {
+	
+	puppet_integrate_fleet = {
+		icon = generic_prepare_civil_war
+		available = {
+			OR = {
+				AND = {	
+					FROM = { 
+						compare_autonomy_state < autonomy_colony 
+						has_navy_size = {
+							size > 0
+						}
+					}	
+					has_navy_experience > 10
+					has_political_power > 300
+				}	
+				FROM = { 
+					compare_autonomy_state < autonomy_puppet 
+					has_navy_size = {
+						size > 0
+					}
+				}	
+			}	
+		}
+
+		visible = {
+			FROM = { 
+				is_subject_of = ROOT 
+				has_navy_size = {
+					size > 0
+				}
+			}	
+		}
+
+		cost = 150
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+			NOT = { has_country_flag = puppet_fleet_integrated }
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			FROM = { set_country_flag = puppet_fleet_integrated }
+			
+				FROM = {
+					transfer_navy = {
+						target = ROOT
+					}
+				}		
+			add_timed_idea = {
+				idea = integrated_foreign_ships
+				days = 90
+			}	
+			if = {
+				limit = {
+					FROM = {
+						compare_autonomy_state > autonomy_integrated_puppet
+					}
+				}
+				navy_experience = -10
+				add_political_power = -150
+			}
+		}
+	}	
+}
