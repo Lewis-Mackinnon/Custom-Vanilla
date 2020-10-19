@@ -20,6 +20,7 @@ A simple mod for HOI4 that combines several features from other mods and allows 
 * [Improved Generic Focus Tree](https://steamcommunity.com/sharedfiles/filedetails/?id=2068231243)
 * [Integrate Puppet Fleets](https://steamcommunity.com/sharedfiles/filedetails/?id=2171383182)
 * [More Division Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=699735138)
+* [More Variants](https://steamcommunity.com/sharedfiles/filedetails/?id=704622378)
 * [Peace Mid War](https://steamcommunity.com/sharedfiles/filedetails/?id=1991365787)
 * [Player-Led Peace Conferences](https://steamcommunity.com/sharedfiles/filedetails/?id=846066944)
 * [Propaganda Campaigns](https://steamcommunity.com/sharedfiles/filedetails/?id=2175242864)
