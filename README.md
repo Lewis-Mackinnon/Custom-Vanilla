@@ -1,6 +1,5 @@
 A simple mod for HOI4 that combines several features from other mods and allows for expanded gameplay. The following mods have been included and edited:
 
-* [Adiya's Historical Flag Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=699302152)
 * [Alternative Air Base Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=1690638578)
 * [Alternative Naval Base Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=1971294297)
 * [Atlant](https://steamcommunity.com/sharedfiles/filedetails/?id=1763117633)
@@ -8,7 +7,6 @@ A simple mod for HOI4 that combines several features from other mods and allows 
 * [Coloured Ship Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=1674336290)
 * [Coloured Air Force - Standard](https://steamcommunity.com/sharedfiles/filedetails/?id=947569629)
 * [Coloured Theater Alert Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=1673873039)
-* [Colored Events](https://steamcommunity.com/sharedfiles/filedetails/?id=1229084232)
 * [Coring States](https://steamcommunity.com/sharedfiles/filedetails/?id=853667255)
 * [Decisions & Formables Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=1327950527)
 * [Expanded Continuous Focuses](https://steamcommunity.com/sharedfiles/filedetails/?id=2086122027)
@@ -33,3 +31,4 @@ A simple mod for HOI4 that combines several features from other mods and allows 
 Additional features that have been developed custom for this mod are as follows:
 * **Custom Field Marshalls and Generals** that can be assigned through various decisions once different conditions are met. Each Field Marshall and General is custom to a member of our group that actively plays HOI4 and has both traits and skill levels suited to their manner of gameplay.
 * **Custom Loading Tips** that share some of our group's best quotes and preserves them forever... Whether it be a good thing or a bad...
+* **Uncensored Facist Germany** that shows the historically correct flag while remaining facist.
