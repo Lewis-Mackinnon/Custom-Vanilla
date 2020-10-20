@@ -127,8 +127,7 @@ army_norm_tt:0 "§YMedium army support§!\nYou will spend:\n§R[?budj_army_3]§!
 army_high_tt:0 "§YHigh army support§!\nDivision training time: §Y+5%§!\nDivision Organization: §G+5%§!\nYou will spend:\n§R[?budj_army_2]§! -  §Yarmy§!\n"
 army_very_high_tt:0 "§YVery high army support§!\nDivision training time: §Y+10%§!\nDivision Organization: §G+10%§!\nYou will spend:\n§R[?budj_army_1]§! -  §Yarmy§!\n"
 
-BUDGET_TOOLTIP:0 "Budget management"
-BUDGET_desc_TOOLTIP:0 "Current budget allocation"
+BUDGET_TOOLTIP:0 "Budget Management"
 
 atl_sphere_of_influence_category:0 "Sphere of influence"
 atl_sphere_of_influence_category_desc:0 "The sphere of influence of our state is determined by regional and small powers with which we have good relations. These countries will slowly move into our ideology and help economically.\nNecessary relationship for the sphere of interest: §Y25§!\nNecessary relationship for the sphere of influence: §Y50§!"

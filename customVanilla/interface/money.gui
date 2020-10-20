@@ -28,41 +28,16 @@ guiTypes = {
 			fixedsize = yes
 			
 			pdx_tooltip = "MONEY_TOOLTIP"
-			pdx_tooltip_delayed = "MONEY_TT_TOOLTIP"
 		}
 		
 	}
 	
 	containerWindowType = {
 		name = "budget_window"
-		position = { x = 0 y = 80 }	
+		position = { x = 1160 y = -10 }	
 		size = { width=610 height=505 }
 		show_sound = open_sub_window
 		moveable = no
-		
-		background = {
-			name = "Background"		
-			quadTextureSprite ="GFX_tiled_plain_bg"
-		}
-		
-		instantTextboxType = {
-			name = "title"
-			position = { x = 69 y = 6 }
-			font = "hoi_20b"
-			text = "BUDGET_TOOLTIP"
-			maxWidth = 450
-			maxHeight = 20
-			format = center
-		}
-		instantTextboxType = {
-			name = "switch"
-			position = { x = 69 y = 27 }
-			font = "hoi_18b"
-			text = "BUDGET_desc_TOOLTIP"
-			maxWidth = 450
-			maxHeight = 20
-			format = center
-		}
 		
 		containerWindowType = {
 			name = "ideas"
@@ -72,7 +47,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "grid"
 				position = { x = 0 y = 0 }
-				size = { width=608 height=-4 }
+				size = { width=610 height=-4 }
 				verticalScrollbar = "right_vertical_slider"
 				margin = { top = 4 bottom = 12}	
 
@@ -980,10 +955,10 @@ guiTypes = {
 			fixedsize = yes
 			alwaystransparent = yes
 		}
-		
+
 		buttonType = {
 			name = "close"
-			position = { x = -50 y = 5 }
+			position = { x = -50 y = -100 }
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
