@@ -3396,11 +3396,11 @@ focus_tree = {
 					}
 				}
 				ROOT = {
-					ai_strategy = {
-						type = invade
-						target = PREV
-						value = 200
-					}
+					#add_ai_strategy = {
+					#	type = invade
+					#	target = PREV
+					#	value = 200
+					#}
 				}
 			}
 		}
