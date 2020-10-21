@@ -31,4 +31,5 @@ A simple mod for HOI4 that combines several features from other mods and allows 
 Additional features that have been developed custom for this mod are as follows:
 * **Custom Field Marshalls and Generals** that can be assigned through various decisions once different conditions are met. Each Field Marshall and General is custom to a member of our group that actively plays HOI4 and has both traits and skill levels suited to their manner of gameplay.
 * **Custom Loading Tips** that share some of our group's best quotes and preserves them forever... Whether it be a good thing or a bad...
+* **Custom Focus Trees** for the following countries: Iraq
 * **Uncensored Facist Germany** that shows the historically correct flag while remaining facist.
