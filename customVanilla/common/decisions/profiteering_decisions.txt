@@ -73,7 +73,7 @@ war_profiteering_efforts = {
 		}
 		remove_effect = {
 			every_country = {
-				limit = { NOT = { has_tag = FROM } }
+				limit = { NOT = { tag = FROM } }
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = war_profitering
