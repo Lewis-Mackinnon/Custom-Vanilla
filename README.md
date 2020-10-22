@@ -2,7 +2,6 @@ A simple mod for HOI4 that combines several features from other mods and allows 
 
 * [Alternative Air Base Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=1690638578)
 * [Alternative Naval Base Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=1971294297)
-* [Atlant](https://steamcommunity.com/sharedfiles/filedetails/?id=1763117633)
 * [British English Localisation](https://steamcommunity.com/sharedfiles/filedetails/?id=812241072)
 * [Coloured Ship Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=1674336290)
 * [Coloured Air Force - Standard](https://steamcommunity.com/sharedfiles/filedetails/?id=947569629)
