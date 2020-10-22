@@ -24,8 +24,3 @@
  
  mark_status_marked:0   "     Unmark State "
  mark_status_unmarked:0 "      Mark State  "
- 
- RULE_ALLOW_SUBJECT_TRANSFERS:0 "Transfer states between AI subjects"
- RULE_ALLOW_SUBJECT_TRANSFERS_FREE_DESC:0 "All types of subjects"
- RULE_ALLOW_SUBJECT_TRANSFERS_LOW_AUTONOMY_ONLY_DESC:0 "Only low autonomy subjects (below colony level)"
- RULE_ALLOW_SUBJECT_TRANSFERS_BLOCKED_DESC:0 "Prohibit transfer of subjects' states"
