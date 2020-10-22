@@ -173,7 +173,7 @@ recruit_the_boys = {
 		}
     }
 
-    recruit_brick = {
+    recruit_dylan_richman = {
         icon = generic_political_actions
 
         cost = 50
@@ -189,8 +189,8 @@ recruit_the_boys = {
             
             ROOT = {
                 create_corps_commander = {
-                    name = "BRICK"
-                    portrait_path = "gfx/leaders/the_boys/custom_portrait_brick.dds"
+                    name = "Dylan Richman"
+                    portrait_path = "gfx/leaders/the_boys/custom_portrait_dylan.dds"
                     traits = { armor_officer urban_assault_specialist immunocompromised }
                     skill = 1
                     attack_skill = 2

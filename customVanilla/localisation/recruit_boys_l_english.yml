@@ -27,6 +27,6 @@
  recruit_sky:0 "Assign General SKY"
  recruit_sky_desc:0 "SKY is best known for his ability to effectively carry out naval invasion orders and secure landing sites."
 
- # BRICK
- recruit_brick:0 "Assign General BRICK"
- recruit_brick_desc:0 "Although prone to multiple illnesses, 'BRICK' is a famed armour officer and heavy attacker."
+ # Dylan Richman
+ recruit_dylan_richman:0 "Assign General Dylan Richman"
+ recruit_dylan_richman_desc:0 "Although prone to multiple illnesses, 'Richman' is a famed armour officer and heavy attacker."
