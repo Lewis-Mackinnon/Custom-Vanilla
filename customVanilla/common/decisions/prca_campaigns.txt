@@ -86,7 +86,7 @@ propaganda_campaings = {
 		days_re_enable = 80
 		
 		modifier = {
-			research_speed_factor = 0.15
+			research_speed_factor = 0.10
 		}
 		
 		complete_effect = {
