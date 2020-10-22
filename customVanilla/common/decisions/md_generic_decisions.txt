@@ -989,64 +989,6 @@ political_actions = {
 		}
     }
 
-	demand_puppet = {
-
-    	icon = generic_civil_support
-
-    	visible = {
-			has_war = no
-			NOT = {
-				has_government = democratic
-			}
-			FROM = {
-				exists = yes
-			}
-			NOT = {
-				FROM = {
-					is_subject = yes
-				}
-			}
-		}
-
-		available = {
-			NOT = {
-				has_country_flag = demanding_puppet
-			}
-        }
-		
-		target_trigger = {
-			FROM = {
-				is_neighbor_of = ROOT
-				NOT = {
-					is_major = yes
-				}
-			}
-		}
-	
-		modifier = {
-			political_power_cost = 0.1
-		}
-	
-		days_remove = 20
-		days_re_enable = 100
-		cost = 150
-
-		complete_effect = {
-			set_country_flag = demanding_puppet
-			FROM = {
-				country_event = { id = md.2 days = 1 }
-			}
-		}
-		
-		remove_effect = {
-			clr_country_flag = demanding_puppet
-		}
-		
-		ai_will_do = {
-			base = 0
-		}
-    }
-
 	anti_neutrality_raids = {
 
     	icon = generic_civil_support
@@ -1615,8 +1557,8 @@ master_of_puppets_category = {
 		}
 	
 		days_remove = 100
-		days_re_enable = 75
-		cost = 75
+		days_re_enable = 200
+		cost = 100
 	
 		ai_will_do = {
 			factor = 1
