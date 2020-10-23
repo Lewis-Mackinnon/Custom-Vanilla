@@ -11,8 +11,8 @@ ideas = {
 			}
 		}
 
-		riots = {
-			picture = riots_ongoing
+		r56i_idea_riots = {
+			picture = r56i_idea_riots_ongoing
 			
 			modifier = {
 				surrender_limit = -0.10
@@ -21,8 +21,8 @@ ideas = {
 
 		}
 		
-		riots_escalate = {
-			picture = riots_increase
+		r56i_idea_riots_escalate = {
+			picture = r56i_idea_riots_increase
 			
 			modifier = {
 				surrender_limit = -0.25
@@ -31,8 +31,8 @@ ideas = {
 
 		}
 
-		suppress_harsh = {
-			picture = riots_suppress
+		r56i_idea_suppress_harsh = {
+			picture = r56i_idea_riots_suppress
 			
 			modifier = {
 				political_power_cost = 0.25
@@ -41,8 +41,8 @@ ideas = {
 
 		}
 
-		suppress_talks = {
-			picture = riots_talks
+		r56i_idea_suppress_talks = {
+			picture = r56i_idea_riots_talks
 			
 			modifier = {
 				political_power_cost = 0.05
@@ -51,7 +51,7 @@ ideas = {
 
 		}
 
-		suppress_spend = {
+		r56i_idea_suppress_spend = {
 			picture = chi_army_corruption
 			
 			modifier = {
