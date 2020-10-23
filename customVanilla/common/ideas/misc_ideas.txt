@@ -1,12 +1,18 @@
-#####---------------------------------------------------------------------> Mod by Sig "GreatExperiment" Altre
-
 ideas = {
-
 	country = {
+		integrated_foreign_ships = {
+			allowed = { always = no }
+			removal_cost = -1
 
-		r56i_idea_riots = {
-		
-			picture = r56i_idea_riots_ongoing
+			picture = generic_navy_bonus
+
+			modifier = {
+				naval_coordination = -0.05
+			}
+		}
+
+		riots = {
+			picture = riots_ongoing
 			
 			modifier = {
 				surrender_limit = -0.10
@@ -15,9 +21,8 @@ ideas = {
 
 		}
 		
-		r56i_idea_riots_escalate = {
-		
-			picture = r56i_idea_riots_increase
+		riots_escalate = {
+			picture = riots_increase
 			
 			modifier = {
 				surrender_limit = -0.25
@@ -26,9 +31,8 @@ ideas = {
 
 		}
 
-		r56i_idea_suppress_harsh = {
-		
-			picture = r56i_idea_riots_suppress
+		suppress_harsh = {
+			picture = riots_suppress
 			
 			modifier = {
 				political_power_cost = 0.25
@@ -37,9 +41,8 @@ ideas = {
 
 		}
 
-		r56i_idea_suppress_talks = {
-		
-			picture = r56i_idea_riots_talks
+		suppress_talks = {
+			picture = riots_talks
 			
 			modifier = {
 				political_power_cost = 0.05
@@ -48,8 +51,7 @@ ideas = {
 
 		}
 
-		r56i_idea_suppress_spend = {
-		
+		suppress_spend = {
 			picture = chi_army_corruption
 			
 			modifier = {
@@ -58,7 +60,5 @@ ideas = {
 			}
 
 		}
-
-	}
-
+	}	
 }
