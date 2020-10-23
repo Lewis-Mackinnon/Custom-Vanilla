@@ -1,4 +1,188 @@
+propaganda_campaings = {
+	priority = 100
+	icon = generic_propaganda
+	
+	visible = {
+		has_country_flag = prca_enabled
+	} 
+	visible_when_empty = yes
+
+	scripted_gui = prca_propaganda_ui	
+}
+
+core_states = {
+	priority = 9
+	icon = spr_the_inevitable_civil_war
+	picture = GFX_decision_cat_picture_spr_the_inevitable_civil_war
+	
+	allowed = {
+		always = yes
+	}
+}
+
+festivities_category = {
+	icon = generic_generic
+
+	allowed = {}
+}
+
+military_of_peace_category = {
+	icon = ger_military_buildup
+
+	allowed = {}
+}
+
+master_of_puppets_category = {
+	icon = generic_independence
+
+	allowed = {}
+}
+
+coalition_government_category = {
+	icon = power_struggle
+
+	allowed = {}
+}
+
+partisans_category = {
+	icon = infiltration
+
+	allowed = {}
+}
+
+internal_issues_category = {
+	icon = generic_industry
+
+	allowed = {}
+}
+
+enabling_act_category = {
+	icon = generic_generic
+
+	allowed = {}
+}
+
+war_profiteering_efforts = {
+	icon = generic_economy
+
+	visible = {
+		has_completed_focus = Generic_profit_from_war
+	}
+}
+
+puppet_integrate_navies = {
+	icon = generic_political_actions
+
+	visible = {
+		any_other_country = {
+			is_subject_of = ROOT
+			compare_autonomy_state < autonomy_colony 
+		}
+	}
+}
+
+formable_nations_mod_category = {
+	icon = generic_formable_nations
+}
+
 recruit_the_boys = {
 	icon = military_operation
 	picture = GFX_decision_cat_picture_chi_political_support
+}
+
+form_iberian_union_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_iberia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_greater_bulgaria_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_greater_bulgaria
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_mexican_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_mexican_empire
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_australasia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_australasia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_greater_finland_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_greater_finland
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_italian_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_italian_empire
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_zapadoslavia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_zapadoslavia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_la_plata_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_la_plata
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_macedonia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_macedonia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+miedzymorze_category = {
+	icon = generic_formable_nations
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+nkvd_category = {
+	icon = generic_communism
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
 }

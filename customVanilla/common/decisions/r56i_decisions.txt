@@ -13,7 +13,7 @@ political_actions = {
 		}
 	
 		available = {
-			has_idea = r56i_laws_security_order
+			has_idea = security_order
 		}
 		
 		ai_will_do = {
@@ -79,7 +79,7 @@ political_actions = {
 		}
 	
 		available = {
-			has_idea = r56i_laws_security_rights
+			has_idea = security_rights
 		}
 
 		ai_will_do = {

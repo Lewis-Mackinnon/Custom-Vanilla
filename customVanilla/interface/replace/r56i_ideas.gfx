@@ -1,87 +1,85 @@
-#####-----> Mod by Sig "GreatExperiment" Altre
-####-----> Reorganized by Pordy <><> <><> <><>
 spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_slot_etgi_ideas_foreign_relations"
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_slot_r56i_laws_category_security"
+		name = "GFX_idea_slot_security"
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_slot_r56i_laws_leadership"
+		name = "GFX_idea_slot_leadership"
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_slot_r56i_laws_category_gender"
+		name = "GFX_idea_slot_gender"
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_slot_r56i_laws_social"
+		name = "GFX_idea_slot_social"
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_slot_r56i_laws_war"
+		name = "GFX_idea_slot_war"
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 
 ###------> Laws gender <><> <><> <><> <><> <><>
 	spriteType = {
-		name = "GFX_idea_r56i_laws_gender_traditional"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_gender_traditional.dds"
+		name = "GFX_idea_gender_traditional"
+		texturefile = "gfx/interface/ideas/laws/gender_traditional.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_gender_limited"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_gender_limited.dds"
+		name = "GFX_idea_gender_limited"
+		texturefile = "gfx/interface/ideas/laws/gender_limited.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_gender_patriarchy"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_gender_patriarchy.dds"
+		name = "GFX_idea_gender_patriarchy"
+		texturefile = "gfx/interface/ideas/laws/gender_patriarchy.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_gender_equality"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_gender_equality.dds"
+		name = "GFX_idea_gender_equality"
+		texturefile = "gfx/interface/ideas/laws/gender_equality.dds"
 	}
 
 ###------> Laws social <><> <><> <><> <><> <><>
 	spriteType = {
-		name = "GFX_idea_r56i_laws_social_normal"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_social_normal.dds"
+		name = "GFX_idea_social_normal"
+		texturefile = "gfx/interface/ideas/laws/social_normal.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_social_hierarchy"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_social_hierarchy.dds"
+		name = "GFX_idea_social_hierarchy"
+		texturefile = "gfx/interface/ideas/laws/social_hierarchy.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_social_revolutionary"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_social_revolutionary.dds"
+		name = "GFX_idea_social_revolutionary"
+		texturefile = "gfx/interface/ideas/laws/social_revolutionary.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_social_diversity"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_social_diversity.dds"
+		name = "GFX_idea_social_diversity"
+		texturefile = "gfx/interface/ideas/laws/social_diversity.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_social_unity"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_social_unity.dds"
+		name = "GFX_idea_social_unity"
+		texturefile = "gfx/interface/ideas/laws/social_unity.dds"
 	}
 
 ###------> Laws war <><> <><> <><> <><> <><>
 	spriteType = {
-		name = "GFX_idea_r56i_laws_war_historical"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_war_diplomacy.dds"
+		name = "GFX_idea_war_historical"
+		texturefile = "gfx/interface/ideas/laws/war_diplomacy.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_war_ideological"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_war_ideological.dds"
+		name = "GFX_idea_war_ideological"
+		texturefile = "gfx/interface/ideas/laws/war_ideological.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_war_brinkmanship"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_war_brinkmanship.dds"
+		name = "GFX_idea_war_brinkmanship"
+		texturefile = "gfx/interface/ideas/laws/war_brinkmanship.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_war_diplomacy"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_war_historical.dds"
+		name = "GFX_idea_war_diplomacy"
+		texturefile = "gfx/interface/ideas/laws/war_historical.dds"
 	}
 
 ###------> Foreign relations <><> <><> <><> <><> <><>
@@ -104,38 +102,38 @@ spriteTypes = {
 
 ###------> Laws security <><> <><> <><> <><> <><>
 	spriteType = {
-		name = "GFX_idea_r56i_laws_security_balanced"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_security_balanced.dds"
+		name = "GFX_idea_security_balanced"
+		texturefile = "gfx/interface/ideas/laws/security_balanced.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_security_order"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_security_order.dds"
+		name = "GFX_idea_security_order"
+		texturefile = "gfx/interface/ideas/laws/security_order.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_security_rights"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_security_rights.dds"
+		name = "GFX_idea_security_rights"
+		texturefile = "gfx/interface/ideas/laws/security_rights.dds"
 	}
 
 ###------> Leadership <><> <><> <><> <><> <><>
 	spriteType = {
-		name = "GFX_idea_r56i_laws_leadership_politics"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_leadership_politics.dds"
+		name = "GFX_idea_leadership_politics"
+		texturefile = "gfx/interface/ideas/laws/leadership_politics.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_leadership_cult"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_leadership_cult.dds"
+		name = "GFX_idea_leadership_cult"
+		texturefile = "gfx/interface/ideas/laws/leadership_cult.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_leadership_secular"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_leadership_secular.dds"
+		name = "GFX_idea_leadership_secular"
+		texturefile = "gfx/interface/ideas/laws/leadership_secular.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_leadership_divine"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_leadership_divine.dds"
+		name = "GFX_idea_leadership_divine"
+		texturefile = "gfx/interface/ideas/laws/leadership_divine.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_r56i_laws_leadership_people"
-		texturefile = "gfx/interface/ideas/laws/r56i_laws_leadership_people.dds"
+		name = "GFX_idea_leadership_people"
+		texturefile = "gfx/interface/ideas/laws/leadership_people.dds"
 	}
 
 ###------> Riots <><> <><> <><> <><> <><>

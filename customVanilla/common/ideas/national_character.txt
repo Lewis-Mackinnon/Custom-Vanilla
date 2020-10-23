@@ -1,0 +1,478 @@
+ideas = {
+	security = { 
+		law = yes
+		
+		# Balanced Approach
+		security_balanced = {
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.05
+			}
+	
+			cost = 100
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 0.5
+			}		
+		}
+		
+		# Order Above All
+		security_order = {
+			available = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+			
+			on_add = {
+				custom_effect_tooltip = r56i_laws_security_order_tt
+			}
+
+			cost = 100
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+
+				modifier = {
+					has_government = fascism
+					factor = 2
+				}
+   			}
+		}
+		
+		# Individual Rights
+		security_rights = {
+			available = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			modifier = {
+				stability_factor = 0.1
+				drift_defence_factor = -0.25
+			}
+
+			cost = 150
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+
+   				modifier = {
+					has_government = democratic
+					factor = 2
+				}
+   			}
+		}
+    }
+
+    leadership = { 
+		law = yes
+		
+		#Power and Politics
+		leadership_politics = {
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = -0.05
+			}
+
+			cost = 200
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 0.5
+   			}
+		}
+		
+		#Personality Cult
+		leadership_cult = {
+			modifier = {
+				fascism_drift = 0.10
+				justify_war_goal_time = -0.20
+				political_power_cost = 0.1
+			}
+
+			cost = 175
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+
+   				modifier = {
+					has_government = fascism
+					factor = 2
+				}
+   			}
+		}
+		
+		#Secular Institutions
+		leadership_secular = {
+			modifier = {
+				democratic_drift = 0.1
+				research_speed_factor = 0.03
+				political_power_cost = 0.05
+			}
+
+			cost = 175
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+
+   				modifier = {
+					has_government = democratic
+					factor = 2
+				}
+   			}
+		}
+		
+		#Divine Inspiration
+		leadership_divine = {
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			modifier = {
+				neutrality_drift = 0.10
+				war_support_factor = 0.15
+				political_power_cost = 0.05	
+			}
+
+			cost = 175
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 0.5
+   			}
+		}
+		
+		#Will of the People
+		leadership_people = {
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			modifier = {
+				communism_drift = 0.10
+				supply_consumption_factor = -0.10
+				political_power_cost = 0.05
+			}
+
+			cost = 175
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+
+   				modifier = {
+					has_government = communism
+					factor = 2
+				}
+   			}
+		}
+	}
+    
+    gender = { 
+		law = yes
+		
+		# Traditional Roles
+		gender_traditional = {
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_cost = 0.05
+			}
+
+			cost = 175
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 0.5
+   			}
+		}
+		
+		# Limited Rights
+		gender_limited = {
+			modifier = {
+				consumer_goods_factor = 0.05
+				conscription_factor = 0.1
+				political_power_cost = 0.01
+			}
+			
+			cost = 250
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+
+   				modifier = {
+					has_government = democratic
+					factor = 2
+				}
+   			}
+		}
+		
+		# Enforced Patriarchy
+		gender_patriarchy = {
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				conscription_factor = -0.10
+				political_power_cost = 0.50
+			}
+			
+			cost = 300 
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 0.5
+
+   				modifier = {
+					has_government = fascism
+					factor = 2
+				}
+   			}
+		}
+		
+		# Total Equality
+		gender_equality = {
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				conscription_factor = 0.20
+				political_power_cost = 0.05
+			}
+
+			cost = 300
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 0.5
+
+   				modifier = {
+					has_government = communism
+					factor = 2
+				}
+   			}
+		}
+    }
+    
+    social = { 
+		law = yes
+
+		# Cultural Norms
+		social_normal = {
+			modifier = {
+				drift_defence_factor = 0.25	
+				local_resources_factor = 0.05
+				industrial_capacity_factory = 0.05
+				stability_factor = -0.05
+			}
+			
+			cost = 175
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 0.5
+   			}
+		}
+		
+		# Hierarchy
+		social_hierarchy = {
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		
+			modifier = {
+				max_command_power = 100
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				stability_factor = -0.05
+			}
+			
+			cost = 175
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 0.5
+
+   				modifier = {
+					has_government = fascism
+					factor = 2
+				}
+   			}
+		}
+		
+		# Revolutionary Mindset
+		social_revolutionary = {
+			modifier = {
+				research_speed_factor = 0.03
+				production_speed_nuclear_reactor_factor = 0.1
+				production_speed_rocket_site_factor = 0.1
+				stability_factor = -0.05
+			}
+
+			cost = 175
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+   			}
+		}
+		
+		# Melting Pot
+		social_diversity = {
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 1
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_infrastructure_factor = 0.10
+				stability_factor = -0.05
+			}
+
+			cost = 175
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 0.5
+				
+   				modifier = {
+					has_government = democratic
+					factor = 2
+				}
+   			}
+		}
+		
+		# The Greater Good
+		social_unity = {
+			modifier = {
+				conscription = 0.008
+				production_speed_bunker_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.1
+				stability_factor = -0.1
+				
+			}
+			
+			cost = 175
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+
+				modifier = {
+					has_government = communism
+					factor = 2
+				}		
+   			}
+		}
+    }
+    
+    war = { 
+		law = yes
+		
+		# Lessons of History
+		war_historical = {
+			modifier = {
+				attrition = -0.05
+                army_defence_factor = 0.01
+				political_power_cost = 0.05
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 0.5
+   			}
+		}
+		
+		# Ideological Struggle
+		war_ideological = {
+			modifier = {
+				drift_defence_factor = 0.50
+				justify_war_goal_time = -0.50
+				political_power_cost = 0.1
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+
+   				modifier = {
+					has_government = fascism
+					factor = 2
+				}
+
+   				modifier = {
+					has_government = communism
+					factor = 2
+				}
+   			}
+		}
+		
+		# Brinksmanship
+		war_brinkmanship = {
+			modifier = {
+				generate_wargoal_tension = -0.50
+				justify_war_goal_time = -0.25
+				political_power_cost = 0.05
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+   			}
+		}
+		
+		# Diplomatic Efforts
+		war_diplomacy = {
+			modifier = {
+				lend_lease_tension = -0.50
+				send_volunteers_tension = -0.20
+				political_power_cost = 0.05
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+				
+   				modifier = {
+					has_government = democratic
+					factor = 2
+				}
+   			}
+		}
+	}
+}

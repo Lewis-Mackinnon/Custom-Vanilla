@@ -12,10 +12,10 @@
      war_bonds_force:0 "Force Bonds Buying"
      war_bonds_no:0 "No Bonds Selling"
      
-     nationalization:0 "Companies Nationalization"
-     nationalization_full:0 "State Property"
-     nationalization_partial:0 "State Capitalism"
-     nationalization_capital:0 "Capitalism"
+     nationalisation:0 "Companies Nationalisation"
+     nationalisation_full:0 "State Property"
+     nationalisation_partial:0 "State Capitalism"
+     nationalisation_capital:0 "Capitalism"
      
      population:0 "Population Growth Control"
      population_encourage:0 "Encourage Growth"

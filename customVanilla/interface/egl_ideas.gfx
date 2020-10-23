@@ -22,7 +22,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_slot_nationalization"
+		name = "GFX_idea_slot_nationalisation"
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
@@ -31,16 +31,16 @@ spriteTypes = {
 	}
 #natio
 	spriteType = {
-		name = "GFX_idea_nationalization_capital"
-		texturefile = "gfx/interface/ideas/laws/nationalization_capital.dds"
+		name = "GFX_idea_nationalisation_capital"
+		texturefile = "gfx/interface/ideas/laws/nationalisation_capital.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_nationalization_full"
-		texturefile = "gfx/interface/ideas/laws/nationalization_full.dds"
+		name = "GFX_idea_nationalisation_full"
+		texturefile = "gfx/interface/ideas/laws/nationalisation_full.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_nationalization_partial"
-		texturefile = "gfx/interface/ideas/laws/nationalization_partial.dds"
+		name = "GFX_idea_nationalisation_partial"
+		texturefile = "gfx/interface/ideas/laws/nationalisation_partial.dds"
 	}
 
 #population

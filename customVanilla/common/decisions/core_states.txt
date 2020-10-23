@@ -1,9 +1,6 @@
-CORING_decisions = {
-
+core_states = {
 	coring_states_1 = {
-
 		name = coring_states.t
-
 		icon = generic_nationalism
 
 		allowed = { always = yes }
@@ -23,9 +20,7 @@ CORING_decisions = {
 		}
 
 		state_target = yes
-
 		on_map_mode = map_only
-
 		target_array = controlled_states
 
 		target_trigger = {
@@ -40,7 +35,6 @@ CORING_decisions = {
 		cost = 50
 
 		fire_only_once = yes
-
 		days_remove = 60
 
 		modifier = {
@@ -55,9 +49,7 @@ CORING_decisions = {
 			}
 		}
 
-		complete_effect = {
-		}
-
+		complete_effect = {}
 		remove_effect = {
 			FROM = {
 				add_core_of = ROOT
@@ -68,7 +60,6 @@ CORING_decisions = {
 	coring_states_2 = {
 
 		name = coring_states.t
-
 		icon = generic_nationalism
 
 		allowed = {
@@ -115,9 +106,7 @@ CORING_decisions = {
 		}
 
 		state_target = yes
-
 		on_map_mode = map_only
-
 		target_array = controlled_states
 
 		target_trigger = {
@@ -132,7 +121,6 @@ CORING_decisions = {
 		cost = 100
 
 		fire_only_once = yes
-
 		days_remove = 90
 
 		modifier = {
@@ -147,8 +135,7 @@ CORING_decisions = {
 			}
 		}
 
-		complete_effect = { }
-
+		complete_effect = {}
 		remove_effect = {
 			FROM = {
 				add_core_of = ROOT
@@ -159,7 +146,6 @@ CORING_decisions = {
 	coring_states_3 = {
 
 		name = coring_states.t
-
 		icon = generic_nationalism
 
 		allowed = {
@@ -190,9 +176,7 @@ CORING_decisions = {
 		}
 
 		state_target = yes
-
 		on_map_mode = map_only
-
 		target_array = controlled_states
 
 		target_trigger = {
@@ -207,7 +191,6 @@ CORING_decisions = {
 		cost = 150
 
 		fire_only_once = yes
-
 		days_remove = 120
 
 		modifier = {
@@ -222,8 +205,7 @@ CORING_decisions = {
 			}
 		}
 
-		complete_effect = { }
-
+		complete_effect = {}
 		remove_effect = {
 			FROM = {
 				add_core_of = ROOT
