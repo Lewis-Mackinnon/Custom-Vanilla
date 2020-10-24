@@ -26,9 +26,10 @@ A simple mod for HOI4 that combines several features from other mods and allows 
 * [State Transfer Tool MP](https://steamcommunity.com/sharedfiles/filedetails/?id=1368778634)
 * [Trade Embargo Mod by PlayerHOI](https://steamcommunity.com/sharedfiles/filedetails/?id=1821550560)
 * [Unique War Names](https://steamcommunity.com/sharedfiles/filedetails/?id=2204846772)
+* [Uncensored Focus Tree Icons](https://steamcommunity.com/sharedfiles/filedetails/?id=1676942018)
 
 Additional features that have been developed custom for this mod are as follows:
 * **Custom Field Marshalls and Generals** that can be assigned through various decisions once different conditions are met. Each Field Marshall and General is custom to a member of our group that actively plays HOI4 and has both traits and skill levels suited to their manner of gameplay.
 * **Custom Loading Tips** that share some of our group's best quotes and preserves them forever... Whether it be a good thing or a bad...
-* **Custom Focus Trees** for the following countries: Iraq
-* **Uncensored Facist Germany** that shows the historically correct flag while remaining facist.
+* **Custom Focus Trees** for the following countries: India, Finland, Austria, the Soviet Union, Italy, Ireland, Poland.
+* **Unsensored Germany** that shows the historically correct flag while remaining facist.
