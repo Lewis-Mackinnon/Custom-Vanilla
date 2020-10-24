@@ -1,4 +1,4 @@
-EMB = {	#Embargoed nation
+EMB = {
 	target_array = ROOT.embargoed_countries
 	country_score = {
 		base = 0
