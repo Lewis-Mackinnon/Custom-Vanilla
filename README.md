@@ -23,6 +23,7 @@ A simple mod for HOI4 that combines several features from other mods and allows 
 * [Realistic Nukes - Updated](https://steamcommunity.com/sharedfiles/filedetails/?id=1805173680)
 * [Recall Volunteers](https://steamcommunity.com/sharedfiles/filedetails/?id=2048998725)
 * [Rename Factions (with keyboard!)](https://steamcommunity.com/sharedfiles/filedetails/?id=1690642183)
+* [Russia Reworked](https://steamcommunity.com/sharedfiles/filedetails/?id=2092066524)
 * [State Transfer Tool MP](https://steamcommunity.com/sharedfiles/filedetails/?id=1368778634)
 * [Trade Embargo Mod by PlayerHOI](https://steamcommunity.com/sharedfiles/filedetails/?id=1821550560)
 * [Unique War Names](https://steamcommunity.com/sharedfiles/filedetails/?id=2204846772)

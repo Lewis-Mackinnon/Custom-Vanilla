@@ -1,0 +1,214 @@
+###########################
+# French Events
+###########################
+
+add_namespace = frances
+
+# Invite France
+country_event = {
+	id = frances.1
+	title = frances.1.t
+	desc = frances.1.d
+	picture = GFX_report_event_stalin_meeting
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 60
+			modifier = {
+				has_government = communism
+				factor = 100
+			}
+		}
+		name = frances.1.a
+		SOV = { add_to_faction = FRA }
+		hidden_effect = {
+			news_event = { hours = 6 id = newsrussia2.19 }
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 40
+			modifier = {
+				has_government = communism
+				factor = 0
+			}
+		}
+		name = frances.1.b
+		hidden_effect = {
+			SOV = {
+				country_event = { id = frances.2 days = 1 }
+			}
+		}
+	}
+}
+
+#France Refuse
+country_event = {
+	id = frances.2
+	title = frances.2.t
+	desc = frances.2.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = frances.2.a
+	}
+}
+
+# Ask France to remove its guarantees
+country_event = {
+	id = frances.3
+	title = frances.3.t
+	desc = frances.3.d
+	picture = GFX_report_event_pierre_laval
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 75
+			modifier = {
+				has_war = yes
+				factor = 100
+			}
+		}
+		name = frances.3.a
+		custom_effect_tooltip = france_guarantee_cancel_tt
+		every_country = {
+			limit = {
+				is_guaranteed_by = FRA
+				any_state = {
+					has_state_flag = slavic_states
+					is_controlled_by = PREV
+				}
+			}
+			hidden_effect = {
+				FRA = {
+					diplomatic_relation = {
+						country = PREV
+					  relation = guarantee
+					  active = no
+					}
+				}
+				FRA = {
+					diplomatic_relation = {
+						country = ROM
+					  relation = guarantee
+					  active = no
+					}
+				}
+			}
+		}
+		diplomatic_relation = {
+			country = SOV
+			relation = non_aggression_pact
+			active = yes
+		}
+		set_country_flag = signed_slavic_pact
+		SOV = {
+			country_event = { id = frances.4 days = 1 }
+		}
+		news_event = {
+			id = newsrussia2.110 days = 2
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 25
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		name = frances.3.b
+		SOV = {
+			country_event = { id = frances.5 days = 1 }
+		}
+	}
+}
+
+#France Accepts
+country_event = {
+	id = frances.4
+	title = frances.4.t
+	desc = frances.4.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+
+	option = { #Thank you
+		ai_chance = {
+			factor = 100
+		}
+		name = frances.4.a
+	}
+}
+
+#France Refuses
+country_event = {
+	id = frances.5
+	title = frances.5.t
+	desc = frances.5.d
+	picture = GFX_report_event_por_president_military_inspection
+
+	is_triggered_only = yes
+
+	option = { #Damn
+		ai_chance = {
+			factor = 100
+		}
+		name = frances.5.a
+	}
+}
+
+#SOV Help Arrives
+country_event = {
+	id = frances.6
+	title = frances.6.t
+	desc = frances.6.d
+	picture = GFX_report_event_generic_rifles
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = frances.6.a
+		if = {
+			limit = {
+				has_capitulated = no
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 4000
+				producer = SOV
+			}
+			add_opinion_modifier = { target = FROM modifier = russian_help }
+		}
+		else_if = {
+			limit = {
+				has_capitulated = yes
+				NOT = { has_government = communism }
+			}
+			add_timed_idea = { idea = FRA_Russian_help days = 730 }
+			add_opinion_modifier = { target = FROM modifier = russian_help }
+		}
+		else_if = {
+			limit = {
+				has_capitulated = yes
+				has_government = communism
+			}
+			add_timed_idea = { idea = FRA_Russian_help days = 730 }
+			add_opinion_modifier = { target = FROM modifier = russian_help }
+		}
+	}
+}

@@ -1,0 +1,370 @@
+###########################
+# Ukrainian Events
+###########################
+
+add_namespace = ukrains
+
+#Soviets Ask Us to Join Them in Their Fight - No Country Flag
+country_event = {
+	id = ukrains.1
+	title = ukrains.1.t
+	desc = ukrains.1.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+
+	option = { #Accepts
+		name = ukrains.1.a
+		ai_chance = { factor = 20 }
+		SOV = {
+			country_event = { id = ukrains.2 hours = 6 }
+		}
+	}
+
+	option = { #Refuse
+		name = ukrains.1.b
+		ai_chance = { factor = 80 }
+		SOV = {
+			country_event = { id = ukrains.3 hours = 6 }
+		}
+	}
+}
+
+#Ukraine Has Accepted
+country_event = {
+	id = ukrains.2
+	title = ukrains.2.t
+	desc = ukrains.2.d
+	picture = GFX_soldiers_handshaking_kolchak_russia2
+
+	is_triggered_only = yes
+
+	option = { #Good
+		name = ukrains.2.a
+		ai_chance = { factor = 100 }
+		SOV = {
+			set_autonomy = {
+				target = UKR
+				autonomy_state = autonomy_dominion
+			}
+		}
+		UKR = {
+			add_ai_strategy = {
+				type = conquer
+				id = SOU
+				value = 200
+			}
+		}
+	}
+}
+
+#Ukraine Has Refused
+country_event = {
+	id = ukrains.3
+	title = ukrains.3.t
+	desc = ukrains.3.d
+	picture = GFX_report_event_ger_civil_war
+
+	is_triggered_only = yes
+
+	option = { #Damn
+		name = ukrains.3.a
+		ai_chance = { factor = 100 }
+		SOU = {
+			set_autonomy = {
+				target = UKR
+				autonomy_state = autonomy_dominion
+			}
+			give_guarantee = UKR
+		}
+		hidden_effect = {
+			UKR = {
+				add_opinion_modifier = {
+					target = SOU
+					modifier = guarantee_our_independence_second_civil
+				}
+				add_opinion_modifier = {
+					target = SOV
+					modifier = our_ennemy_second_civil
+				}
+				add_ideas = SOV_Communist_influence_second
+				add_ai_strategy = {
+					type = conquer
+					id = SOV
+					value = 200
+				}
+				set_politics = {
+					ruling_party = neutrality
+				}
+				set_popularities = {
+					democratic = 25
+					neutrality = 45
+					fascism = 15
+					communism = 15
+				}
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = our_ennemy_second_civil
+				}
+			}
+			SOU = {
+				add_opinion_modifier = {
+					target = UKR
+					modifier = guarantee_ukraine_independence
+				}
+			}
+		}
+	}
+}
+
+#Soviets Ask Us to Join Them in Their Fight - Country Flag
+country_event = {
+	id = ukrains.4
+	title = ukrains.4.t
+	desc = ukrains.4.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+
+	option = { #Accepts
+		name = ukrains.4.a
+		ai_chance = { factor = 95 }
+		SOV = {
+			country_event = { id = ukrains.5 hours = 6 }
+		}
+	}
+
+	option = { #Refuse
+		name = ukrains.4.b
+		ai_chance = { factor = 5 }
+		SOV = {
+			country_event = { id = ukrains.6 hours = 6 }
+		}
+	}
+}
+
+#Ukraine Has Accepted
+country_event = {
+	id = ukrains.5
+	title = ukrains.5.t
+	desc = ukrains.5.d
+	picture = GFX_soldiers_handshaking_kolchak_russia2
+
+	is_triggered_only = yes
+
+	option = { #Good
+		name = ukrains.5.a
+		ai_chance = { factor = 100 }
+		SOV = {
+			set_autonomy = {
+				target = UKR
+				autonomy_state = autonomy_dominion
+			}
+		}
+		UKR = {
+			add_ai_strategy = {
+				type = conquer
+				id = SOU
+				value = 200
+			}
+		}
+	}
+}
+
+#Ukraine Has Refused
+country_event = {
+	id = ukrains.6
+	title = ukrains.6.t
+	desc = ukrains.6.d
+	picture = GFX_report_event_ger_civil_war
+
+	is_triggered_only = yes
+
+	option = { #Damn
+		name = ukrains.6.a
+		ai_chance = { factor = 100 }
+		UKR = {
+			add_ideas = SOV_Neutrality_second
+			add_opinion_modifier = {
+				target = SOV
+				modifier = neutral_second_war
+			}
+			add_opinion_modifier = {
+				target = SOU
+				modifier = neutral_second_war
+			}
+		}
+	}
+}
+
+#Soviets Ask Us to stay neutral
+country_event = {
+	id = ukrains.7
+	title = ukrains.7.t
+	desc = ukrains.7.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+
+	option = { #Accepts
+		name = ukrains.7.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				SOV = {
+					has_country_flag = sympathize_with_ukraine
+				}
+			}
+		}
+		SOV = {
+			country_event = { id = ukrains.8 hours = 6 }
+		}
+	}
+
+	option = { #Refuse
+		name = ukrains.7.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				SOV = {
+					has_country_flag = sympathize_with_ukraine
+				}
+			}
+		}
+		SOV = {
+			country_event = { id = ukrains.9 hours = 6 }
+		}
+		UKR = {
+			set_country_flag = refused_neutrality
+		}
+	}
+}
+
+#Ukraine Has Accepted
+country_event = {
+	id = ukrains.8
+	title = ukrains.8.t
+	desc = ukrains.8.d
+	picture = GFX_soldiers_handshaking_kolchak_russia2
+
+	is_triggered_only = yes
+
+	option = { #Good
+		name = ukrains.8.a
+		ai_chance = { factor = 100 }
+		UKR = {
+			add_ideas = SOV_Neutrality_second
+			add_opinion_modifier = {
+				target = SOV
+				modifier = neutral_second_war
+			}
+			add_opinion_modifier = {
+				target = SOU
+				modifier = neutral_second_war
+			}
+		}
+	}
+}
+
+#Ukraine Has Refused
+country_event = {
+	id = ukrains.9
+	title = ukrains.9.t
+	desc = ukrains.9.d
+	picture = GFX_report_event_ger_civil_war
+
+	is_triggered_only = yes
+
+	option = { #Damn
+		name = ukrains.9.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Ukraine Gets Event to Intervene in the Second Civil War
+country_event = {
+	id = ukrains.10
+	title = ukrains.10.t
+	desc = ukrains.10.d
+	picture = GFX_battkle_kursk_russia2
+
+	fire_only_once = yes
+
+	trigger = {
+		TAG = UKR
+		UKR = {
+			has_country_flag = refused_neutrality
+		}
+		SOU = {
+			has_war_with = SOV
+			surrender_progress > 0.7
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = { #Help SOU
+		name = ukrains.10.a
+		ai_chance = { factor = 25 }
+		UKR = {
+			add_to_war = {
+				targeted_alliance = SOU
+				enemy = SOV
+				hostility_reason = help_soviet_union
+			}
+			add_ideas = SOV_Second_civil_war
+		}
+	}
+
+	option = { #Help SOV
+		name = ukrains.10.b
+		ai_chance = { factor = 35 }
+		SOV = {
+			country_event = { id = ukrains.11 hours = 1 }
+		}
+	}
+
+	option = { #Join Nobody
+		name = ukrains.10.c
+		ai_chance = { factor = 40 }
+	}
+}
+
+#SOV Gets Event for Ukrainian Help
+country_event = {
+	id = ukrains.11
+	title = ukrains.11.t
+	desc = ukrains.11.d
+	picture = GFX_report_event_ger_civil_war
+
+	is_triggered_only = yes
+
+	option = { #Accept
+		name = ukrains.11.a
+		ai_chance = { factor = 50 }
+		SOV = {
+			set_country_flag = sympathize_with_ukraine
+			set_autonomy = {
+				target = UKR
+				autonomy_state = autonomy_dominion
+			}
+		}
+		UKR = {
+			add_to_war = {
+				targeted_alliance = SOV
+				enemy = SOU
+				hostility_reason = anti_soviet_alliance
+			}
+		}
+		custom_effect_tooltip = accept_help_ukraine
+	}
+
+	option = { #Refuse
+		name = ukrains.11.b
+		ai_chance = { factor = 50 }
+	}
+}

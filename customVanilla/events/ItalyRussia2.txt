@@ -1,0 +1,441 @@
+###########################
+# Italianr Events
+###########################
+
+add_namespace = italys
+
+# Invite Italy
+country_event = {
+	id = italys.1
+	title = italys.1.t
+	desc = italys.1.d
+	picture = GFX_report_event_german_italian_pact
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 80
+			modifier = {
+				has_government = neutrality
+				factor = 100
+			}
+		}
+		name = italys.1.a
+		SOV = {
+			add_to_faction = ITA
+			country_event = { id = italys.2 days = 1 }
+			add_opinion_modifier = {
+				target = ITA
+				modifier = russian_diplomats
+			}
+		}
+		ITA = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = russian_diplomats
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = SOV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = SOV
+				value = 200
+			}
+		}
+		set_country_flag = accepted_russian_deal
+		hidden_effect = {
+			news_event = {
+				id = newsrussia2.111 days = 2
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+			modifier = {
+				has_government = neutrality
+				factor = 0
+			}
+		}
+		name = italys.1.b
+		SOV = {
+			country_event = { id = italys.3 days = 1 }
+		}
+	}
+}
+
+#Italy Accepts
+country_event = {
+	id = italys.2
+	title = italys.2.t
+	desc = italys.2.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = italys.2.a
+	}
+}
+
+#Italy Refuses
+country_event = {
+	id = italys.3
+	title = italys.3.t
+	desc = italys.3.d
+	picture = GFX_report_event_poland_rejects
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = italys.3.a
+	}
+}
+
+#Must Give 103 to Italy
+country_event = {
+	id = italys.4
+	title = italys.4.t
+	desc = italys.4.d
+	picture = GFX_report_event_german_polish_border
+
+	fire_only_once = yes
+
+	trigger = {
+		controls_state = 103
+		OR = {
+			is_in_faction_with = SOV
+			tag = SOV
+			is_subject_of = SOV
+		}
+		NOT = {
+			tag = ITA
+		}
+		ITA = {
+			is_in_faction_with = SOV
+			has_country_flag = accepted_russian_deal
+			NOT = {
+				owns_state = 103
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = italys.4.a
+		ITA = {
+			transfer_state = 103
+			country_event = { id = italys.5 days = 1 }
+		}
+	}
+}
+
+#103 Transfered!
+country_event = {
+	id = italys.5
+	title = italys.5.t
+	desc = italys.5.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = italys.5.a
+	}
+}
+
+# Ask Italy to Back Off the Slavic States
+country_event = {
+	id = italys.6
+	title = italys.6.t
+	desc = italys.6.d
+	picture = GFX_report_event_german_italian_pact
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 60
+			modifier = {
+				has_war = yes
+				factor = 90
+			}
+		}
+		name = italys.6.a
+		diplomatic_relation = {
+			country = SOV
+			relation = non_aggression_pact
+			active = yes
+		}
+		every_state = {
+			limit = {
+				has_state_flag = slavic_states
+				is_claimed_by = ITA
+			}
+			remove_claim_by = ITA
+		}
+		every_state = {
+			limit = {
+				has_state_flag = slavic_states
+				is_controlled_by = ITA
+			}
+			SOV = {
+				transfer_state = PREV
+			}
+		}
+		SOV = {
+			country_event = { id = italys.7 days = 1 }
+		}
+		hidden_effect = {
+			news_event = {
+				id = newsrussia2.112 days = 2
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 40
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+		name = italys.6.b
+		SOV = {
+			country_event = { id = italys.8 days = 1 }
+		}
+	}
+}
+
+#Italy Accepts
+country_event = {
+	id = italys.7
+	title = italys.7.t
+	desc = italys.7.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = italys.7.a
+	}
+}
+
+#Italy Refuses
+country_event = {
+	id = italys.8
+	title = italys.8.t
+	desc = italys.8.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = italys.8.a
+	}
+}
+
+#Italian Embassy
+country_event = {
+	id = italys.9
+	title = italys.9.t
+	desc = italys.9.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = { #Sure
+		name = italys.9.a
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 100
+				has_government = fascism
+			}
+		}
+		set_country_flag = ITA_accepted_embassy_fascist
+		diplomatic_relation = {
+			country = SOV
+			relation = non_aggression_pact
+			active = yes
+		}
+		add_opinion_modifier = {
+			target = SOV
+			modifier = established_italian_embassy
+		}
+		SOV = {
+			country_event = { id = italys.10 days = 1 }
+		}
+	}
+
+	option = { #No
+		name = italys.9.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_government = fascism
+			}
+		}
+		SOV = {
+			country_event = { id = italys.11 days = 1 }
+		}
+	}
+}
+
+#Italy Accepts
+country_event = {
+	id = italys.10
+	title = italys.10.t
+	desc = italys.10.d
+	picture = GFX_handshake_russia2
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = italys.10.a
+		add_opinion_modifier = {
+			target = ITA
+			modifier = established_italian_embassy
+		}
+	}
+}
+
+#Italy Refuses
+country_event = {
+	id = italys.11
+	title = italys.11.t
+	desc = italys.11.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = italys.11.a
+	}
+}
+
+#Invitation to SOV faction
+country_event = {
+	id = italys.12
+	title = italys.12.t
+	desc = italys.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = { #Yes!
+		name = italys.12.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 75
+				OR = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+		}
+		add_war_support = 0.05
+		SOV = {
+			country_event = { id = italys.13 days = 1 }
+		}
+	}
+
+	option = { #No
+		name = italys.12.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 25
+				OR = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+		}
+		SOV = {
+			country_event = { id = italys.14 days = 1 }
+		}
+	}
+}
+
+#Italy Accepts
+country_event = {
+	id = italys.13
+	title = italys.13.t
+	desc = italys.13.d
+	picture = GFX_handshake_russia2
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = italys.13.a
+		if = {
+			limit = {
+				is_faction_leader = no
+			}
+			create_faction = italian_russian_alliance
+		}
+		else = {
+			set_faction_name = italian_russian_alliance
+		}
+		add_to_faction = ITA
+		hidden_effect = {
+			news_event = { id = newsrussia2.134 hours = 12 }
+		}
+	}
+}
+
+#Italy Refuses
+country_event = {
+	id = italys.14
+	title = italys.14.t
+	desc = italys.14.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = italys.14.a
+	}
+}

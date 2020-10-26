@@ -1,0 +1,696 @@
+###########################
+# German Events
+###########################
+
+add_namespace = germanys
+
+# Exile to Siberia
+country_event = {
+	id = germanys.1
+	title = germanys.1.t
+	desc = germanys.1.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = germanys.1.a
+		ai_chance = {
+			factor = 90
+		}
+		custom_effect_tooltip = SOV_exile_siberia_german_reward_tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_subject_of = SOV
+				}
+				SOV = {
+					set_autonomy = {
+		    			target = PREV
+		    			autonomy_state = autonomy_free
+					}
+				}
+			}
+			every_state = {
+	    		limit = {
+	    			is_owned_by = SOV
+	    			distance_to = {
+	    				value > 6000
+	    				target = 574
+					}
+	    		}
+	    		GER = { transfer_state = PREV }
+			}
+			news_event = { days = 1 id = newsrussia2.13 }
+			SOV = {
+				set_cosmetic_tag = FER
+				set_global_flag = SOV_became_far_eastern_republic
+			}
+		}
+		add_ideas = GER_Russian_triumph
+		SOV = {
+			dismantle_faction = yes
+			add_ideas = SOV_Exiled_russia
+		}
+		every_country = {
+			limit = {
+				has_war_with = SOV
+			}
+			white_peace = SOV
+			set_truce = {
+    			target = SOV
+    			days = 365
+			}
+		}
+	}
+
+	option = {
+		name = germanys.1.b
+		ai_chance = {
+			factor = 10
+		}
+		SOV = {
+			country_event = { days = 1 id = germanys.2 }
+		}
+	}
+}
+
+#Germany Refuses Surrender
+country_event = {
+	id = germanys.2
+	title = germanys.2.t
+	desc = germanys.2.d
+	picture = GFX_report_event_hungary_refused
+
+	is_triggered_only = yes
+
+	option = {
+		name = germanys.2.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Germany Gets Event to Split Czechoslovakia
+country_event = {
+	id = germanys.3
+	title = germanys.3.t
+	desc = germanys.3.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+	option = { #Accept
+		name = germanys.3.a
+		ai_chance = {
+			factor = 70
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 664
+					state = 70
+					state = 71
+					state = 73
+				}
+				OR = {
+					is_controlled_by = GER
+					any_country = {
+						is_subject_of = GER
+						controls_state = PREV
+					}
+				}
+			}
+			SOV = {
+				transfer_state = PREV
+				country_event = { id = germanys.4 days = 1 }
+				diplomatic_relation = {
+				    country = GER
+				    relation = non_aggression_pact
+				    active = yes
+				}
+				set_country_flag = germany_accpet_german_russo_pact
+			}
+		}
+		hidden_effect = {
+			news_event = {
+				id = newsrussia2.107 days = 2
+			}
+		}
+	}
+
+	option = { #Refuse
+		name = germanys.3.b
+		ai_chance = {
+			factor = 30
+		}
+		SOV = {
+			country_event = { id = germanys.5 days = 1 }
+		}
+	}
+}
+
+#Germany Accepts
+country_event = {
+	id = germanys.4
+	title = germanys.4.t
+	desc = germanys.4.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+
+	is_triggered_only = yes
+
+	option = { #Amazing
+		name = germanys.4.a
+		ai_chance = {
+			factor = 100
+		}
+		every_state = {
+			limit = {
+				OR = {
+					has_state_flag = german_slavic_state
+					has_state_flag = german_baltic_state
+				}
+				OR = {
+					is_controlled_by = SOV
+					any_country = {
+						is_subject_of = SOV
+						controls_state = PREV
+					}
+				}
+			}
+			GER = {
+				transfer_state = PREV
+				add_state_claim = PREV
+			}
+		}
+	}
+}
+
+#Germany Refuses
+country_event = {
+	id = germanys.5
+	title = germanys.5.t
+	desc = germanys.5.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	option = { #Damn Germany
+		name = germanys.5.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#SOV Requests Alliance
+country_event = {
+	id = germanys.6
+	title = germanys.6.t
+	desc = germanys.6.d
+	picture = GFX_report_event_germany_politician_handshake
+
+	is_triggered_only = yes
+
+	option = { #Accept
+		name = germanys.6.a
+		ai_chance = {
+			factor = 100
+		}
+		SOV = {
+			set_country_flag = german_alliance_incident
+			if = {
+				limit = {
+					OR = {
+						GER = {
+							controls_state = 102
+						}
+						any_country = {
+							is_subject_of = GER
+							controls_state = 102
+						}
+					}
+				}
+				transfer_state = 102
+			}
+			country_event = { id = germanys.7 days = 1 }
+			if = {
+				limit = {
+					GER = {
+						NOT = {
+							is_faction_leader = yes
+						}	
+					}
+				}
+				add_to_faction = GER
+				set_faction_name = moscow_berlin_pact
+			}
+			else_if = {
+				limit = {
+					GER = {
+						is_faction_leader = yes
+					}
+				}
+				GER = {
+					add_to_faction = SOV
+				}
+			}
+			else = {
+				create_faction = russo_german_alliance
+				add_to_faction = GER
+			}
+		}
+		GER = {
+			add_ai_strategy = {
+				type = alliance
+				id = SOV
+				value = 200
+			}
+		}
+		hidden_effect = {
+			news_event = {
+				id = newsrussia2.108 days = 2
+			}
+		}
+	}
+
+	option = { #Refuse
+		name = germanys.6.b
+		ai_chance = {
+			factor = 0
+		}
+		SOV = {
+			country_event = { id = germanys.8 days = 1 }
+		}
+	}
+}
+
+#Germany Accepts
+country_event = {
+	id = germanys.7
+	title = germanys.7.t
+	desc = germanys.7.d
+	picture = GFX_handshake_russia2
+
+	is_triggered_only = yes
+
+	option = { #Amazing
+		name = germanys.7.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Germany Refuses
+country_event = {
+	id = germanys.8
+	title = germanys.8.t
+	desc = germanys.8.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = { #Damn Germany
+		name = germanys.8.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#SOV Backstabs
+country_event = {
+	id = germanys.9
+	title = germanys.9.t
+	desc = germanys.9.d
+	picture = GFX_report_event_hungarian_soldiers
+
+	is_triggered_only = yes
+
+	option = { #Accept
+		name = germanys.9.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 60
+				surrender_progress > 0.10
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					has_state_flag = slavic_states
+					has_state_flag = slavic_states_czech
+				}	
+				is_controlled_by = GER
+			}
+			SOV = {
+				transfer_state = PREV
+			}
+		}
+		SOV = {
+			country_event = { id = germanys.10 days = 1 }
+		}
+	}
+
+	option = { #Refuse
+		name = germanys.9.b
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 40
+				surrender_progress > 0.10
+			}
+		}
+		SOV = {
+			country_event = { id = germanys.11 days = 1 }
+		}
+	}
+}
+
+#Germany Accepts
+country_event = {
+	id = germanys.10
+	title = germanys.10.t
+	desc = germanys.10.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = { #Amazing
+		name = germanys.10.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Germany Refuses
+country_event = {
+	id = germanys.11
+	title = germanys.11.t
+	desc = germanys.11.d
+	picture = GFX_report_event_generic_panzer_attack
+
+	is_triggered_only = yes
+
+	option = { #Get Wargoal
+		name = germanys.11.a
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = GER
+		}
+	}
+}
+
+#Germany Slav Incident
+country_event = {
+	id = germanys.12
+	title = germanys.12.t
+	desc = germanys.12.d
+	picture = GFX_report_event_ger_civil_war
+
+	trigger = {
+		tag = SOV
+		is_in_faction_with = GER
+		has_completed_focus = SOV_alliance_with_germany_junta
+		has_country_flag = {
+		    flag = german_alliance_incident
+		    days > 180
+		}
+	}
+
+	option = { #It's okay
+		name = germanys.12.a
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.2
+		add_manpower = -50
+		clr_country_flag = german_alliance_incident
+		set_country_flag = german_alliance_incident
+	}
+
+	option = { #Leave GER
+		name = germanys.12.b
+		ai_chance = {
+			factor = 100
+		}
+		add_manpower = -50
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			GER = {
+				leave_faction = yes
+			}
+		}
+		else = {
+			leave_faction = yes
+		}
+		clr_country_flag = german_alliance_incident
+		SOV = {
+			add_ai_strategy = {
+				type = antagonize
+				id = GER
+				value = 200
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = hostile_relations
+			}
+		}
+		GER = {
+			country_event = { id = germanys.13 days = 1 }
+		}
+	}
+}
+
+#SOV Leaves Faction (or kicks us)
+country_event = {
+	id = germanys.13
+	title = germanys.13.t
+	desc = germanys.13.d
+	picture = GFX_report_event_german_inspect_troops
+
+	is_triggered_only = yes
+
+	option = { #Uh...
+		name = germanys.13.a
+		ai_chance = {
+			factor = 100
+		}
+		GER = {
+			add_ai_strategy = {
+				type = antagonize
+				id = SOV
+				value = 200
+			}
+			add_opinion_modifier = {
+				target = SOV
+				modifier = hostile_relations
+			}
+		}
+	}
+}
+
+#SOV Threatens
+country_event = {
+	id = germanys.14
+	title = germanys.14.t
+	desc = germanys.14.d
+	picture = GFX_report_event_british_artillery
+
+	is_triggered_only = yes
+
+	option = { #Okay...
+		name = germanys.14.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 40
+				surrender_progress > 0.75
+			}
+		}
+		SOV = {
+			puppet = GER
+			country_event = { id = germanys.15 days = 1 }
+		}
+	}
+
+	option = { #No!
+		name = germanys.14.b
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 60
+				surrender_progress > 0.25
+			}
+		}
+		SOV = {
+			country_event = { id = germanys.16 days = 1 }
+		}
+	}
+}
+
+#GER Accepts
+country_event = {
+	id = germanys.15
+	title = germanys.15.t
+	desc = germanys.15.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = { #Easy
+		name = germanys.15.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#GER Refuses
+country_event = {
+	id = germanys.16
+	title = germanys.16.t
+	desc = germanys.16.d
+	picture = GFX_report_event_generic_panzer_attack
+
+	is_triggered_only = yes
+
+	option = { #You die then
+		name = germanys.16.a
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = GER
+		}
+	}
+}
+
+#SOV Wants to return our Lost Territories
+country_event = {
+	id = germanys.17
+	title = germanys.17.t
+	desc = germanys.17.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = { #Accept
+		name = germanys.17.a
+		ai_chance = {
+			factor = 100
+		}
+		GER = {
+			transfer_state = 762
+			transfer_state = 86
+			transfer_state = 85
+			add_state_core = 762
+			add_state_core = 86
+			add_state_core = 85
+			diplomatic_relation = {
+				country = SOV
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		SOV = {
+			country_event = { id = germanys.18 hours = 6 }
+		}
+	}
+
+	option = { #Refuse
+		name = germanys.17.b
+		ai_chance = {
+			factor = 0
+		}
+		SOV = {
+			country_event = { id = germanys.19 hours = 6 }
+		}
+	}
+}
+
+#Germany Accept It's Rightful Territories
+country_event = {
+	id = germanys.18
+	title = germanys.18.t
+	desc = germanys.18.d
+	picture = GFX_handshake_russia2
+
+	is_triggered_only = yes
+
+	option = { #Good
+		name = germanys.18.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Germany Refuse It's Rightful Territories
+country_event = {
+	id = germanys.19
+	title = germanys.19.t
+	desc = germanys.19.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = { #...
+		name = germanys.19.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Russo-German Pact Polish Land
+country_event = {
+	id = germanys.20
+	title = germanys.20.t
+	desc = germanys.20.d
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	trigger = {
+		tag = SOV
+		has_government = neutrality
+		has_completed_focus = SOV_german_russian_pact
+		SOV = {
+			any_owned_state = {
+				has_state_flag = german_slavic_state
+			}
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 70
+	}
+
+	option = { #We Must Respect the Treaty
+		name = germanys.20.a
+		ai_chance = {
+			factor = 100
+		}
+		every_state = {
+			limit = {
+				has_state_flag = german_slavic_state
+				is_owned_and_controlled_by = SOV
+			}
+			GER = {
+				transfer_state = PREV
+				add_state_claim = PREV
+			}
+		}
+	}
+}

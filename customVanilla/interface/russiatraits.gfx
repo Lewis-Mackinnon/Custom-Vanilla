@@ -1,0 +1,7 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_trait_yellow_jersey"
+		texturefile = "gfx/interface/traits/trait_yellow_jersey.dds"
+	}
+}

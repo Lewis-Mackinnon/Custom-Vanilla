@@ -1908,7 +1908,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			add_ideas = RAJ_lions_of_the_great_war
-			remove_idea = RAJ_fading_agrarianism
+			swap_ideas = {
+				remove_idea = RAJ_fading_agrarianism
+				add_idea = RAJ_agrarianism_past
+			}
 			custom_effect_tooltip = RAJ_create_unit_sikh_tt
 			hidden_effect = {
 

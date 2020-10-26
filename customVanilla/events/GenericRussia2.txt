@@ -1,0 +1,937 @@
+###########################
+# Generic/Special Events
+###########################
+
+add_namespace = generics
+
+# China Soviet-PRC Ultimatum
+country_event = {
+	id = generics.1
+	title = generics.1.t
+	desc = generics.1.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = generics.1.a
+		every_owned_state = {
+			limit = {
+				is_core_of = PRC
+	        }
+	        FROM = {
+				transfer_state = PREV
+			}
+    	}
+    	if = {
+    		limit = {
+        	all_owned_state = {
+    				is_core_of = PRC
+					}
+    		}
+    		custom_effect_tooltip = SOV_game_totally_over_TT
+    	}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = generics.1.b
+		FROM = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
+		SOV = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
+	}
+}
+
+# Middle East Ultimatum
+country_event = {
+	id = generics.2
+	title = generics.2.t
+	desc = generics.2.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	option = {
+		name = generics.2.a
+		ai_chance = {
+			factor = 45
+		}
+		if = {
+			limit = {
+				ROOT = {
+					has_full_control_of_state = 797
+				}
+			}
+			SOV = {
+				transfer_state = 797
+			}
+		}
+		SOV = { country_event = { days = 1 id = soviets.39 } }
+	}
+
+	option = {
+		name = generics.2.b
+		ai_chance = {
+			factor = 55
+		}
+		SOV = { country_event = { days = 1 id = soviets.40 } }
+		add_opinion_modifier = { target = SOV modifier = soviet_threat }
+	}
+}
+
+# War Against Germany (event does nothing but prevent vanilla Yalta conference from happening)
+country_event = {
+	id = generics.3
+	title = generics.3.t
+	desc = generics.3.d
+	picture = GFX_battkle_kursk_russia2
+
+	trigger = {
+		NOT = { has_global_flag = had_yalta_conference }
+		NOT = { tag = GER }
+		has_government = democratic
+		has_war_with = GER
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	hidden = yes
+
+	immediate = {
+		set_global_flag = had_yalta_conference
+	}
+
+	option = {
+		name = generics.3.a
+	}
+}
+
+#FROM Subject gets event to unify
+country_event = {
+	id = generics.4
+	title = generics.4.t
+	desc = generics.4.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = { #Join the Union
+		name = generics.4.a
+		ai_chance = {
+			base = 75
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_core_of = SOV
+		}
+		SOV = {
+			country_event = { id = soviets.87 days = 1 }
+		}
+		custom_effect_tooltip = SOV_game_totally_over_TT
+	}
+
+	option = { #No!
+		name = generics.4.b
+		ai_chance = {
+			base = 25
+		}
+		SOV = {
+			country_event = { id = soviets.88 days = 1 }
+		}
+	}
+}
+
+#If SOV completed Post War Influence focus, any country they puppet will get this national spirit
+country_event = {
+	id = generics.5
+
+	hidden = yes
+
+	trigger = {
+		SOV = {
+			has_completed_focus = SOV_post_war_influence
+		}
+		is_subject_of = SOV
+		NOT = {
+			has_idea = SOV_Post_war_influence
+		}
+	}
+
+	immediate = {
+		add_ideas = SOV_Post_war_influence
+	}
+}
+
+#All the events below are here to trigger world events after a unique revolution happens (Operations in Trotsky's path)
+#This is somehow the best solution to trigger world events, as triggering them from the operation file either doesn't work or does weird results with FROM tag
+
+#Korea
+country_event = {
+	id = generics.6
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		news_event = { days = 1 id = newsrussia2.48 }
+	}
+}
+
+#Indochina
+country_event = {
+	id = generics.7
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		news_event = { days = 1 id = newsrussia2.49 }
+	}
+}
+
+#Tibet
+country_event = {
+	id = generics.8
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		news_event = { days = 1 id = newsrussia2.50 }
+	}
+}
+
+#Ethiopia
+country_event = {
+	id = generics.9
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		news_event = { days = 1 id = newsrussia2.51 }
+	}
+}
+
+#Egypt
+country_event = {
+	id = generics.10
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		news_event = { days = 1 id = newsrussia2.40 }
+	}
+}
+
+#Morocco
+country_event = {
+	id = generics.11
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		news_event = { days = 1 id = newsrussia2.52 }
+	}
+}
+
+#Yugoslavia
+country_event = {
+	id = generics.12
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				country_exists = YUG
+			}
+			news_event = { days = 1 id = newsrussia2.53 }
+		}
+		else = {
+			news_event = { days = 1 id = newsrussia2.63 } #news event if Yugoslavia was dismantled peacefully
+		}
+	}
+}
+
+#Spain
+country_event = {
+	id = generics.13
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		news_event = { days = 1 id = newsrussia2.55 }
+	}
+}
+
+#UK
+country_event = {
+	id = generics.14
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		news_event = { days = 1 id = newsrussia2.54 }
+	}
+}
+
+#Country Holding Slavic Claim Gets Event
+country_event = {
+	id = generics.15
+	title = generics.15.t
+	desc = generics.15.d
+	picture = GFX_report_event_soviet_soldiers
+
+	is_triggered_only = yes
+
+	option = { #Accept
+		trigger = {
+			is_subject = no
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 90
+				has_war = yes
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_major = yes
+					any_country = {
+						is_major = yes
+						is_in_faction_with = ROOT
+					}
+					any_country = {
+						is_major = yes
+						has_guaranteed = ROOT
+					}
+				}
+			}
+		}
+		name = generics.15.a
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of = ROOT
+				}
+			}
+			custom_effect_tooltip = FROM_is_puppet_slavic_states
+			every_state = {
+				limit = {
+					is_controlled_by = FROM
+					OR = {
+						has_state_flag = slavic_states
+						has_state_flag = slavic_states_czech
+						has_state_flag = german_slavic_state
+					}	
+				}
+				SOV = {
+					transfer_state = PREV
+				}
+			}
+			FROM = {
+				country_event = { id = generics.18 days = 1 }
+			}
+		}
+		else = {
+			every_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						has_state_flag = slavic_states
+						has_state_flag = slavic_states_czech
+						has_state_flag = german_slavic_state
+					}
+				}
+				SOV = {
+					transfer_state = PREV
+				}
+			}
+			SOV = {
+				country_event = { id = generics.16 days = 1 }
+			}
+		}
+		if = {
+			limit = {
+				all_owned_state = {
+					has_state_flag = slavic_states
+				}
+			}
+			custom_effect_tooltip = SOV_game_totally_over_TT
+		}
+	}
+
+	option = { #Refuse
+		trigger = {
+			is_subject = no
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+			modifier = {
+				factor = 75
+				OR = {
+					is_major = yes
+					any_country = {
+						is_major = yes
+						is_in_faction_with = ROOT
+					}
+					any_country = {
+						is_major = yes
+						has_guaranteed = ROOT
+					}
+				}
+			}
+		}
+		name = generics.15.b
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of = ROOT
+				}
+			}
+			custom_effect_tooltip = FROM_is_puppet_slavic_states
+			FROM = {
+				country_event = { id = generics.19 days = 1 }
+			}
+		}
+		else = {
+			SOV = {
+				country_event = { id = generics.17 days = 1 }
+			}
+		}
+	}
+
+	option = { #We should ask our master first
+		trigger = {
+			is_subject = yes
+			NOT = {
+				FROM = {
+					tag = OVERLORD
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		name = generics.15.c
+		OVERLORD = {
+			country_event = { id = generics.15 days = 1 }
+		}
+	}
+}
+
+#Country Accepts
+country_event = {
+	id = generics.16
+	title = generics.16.t
+	desc = generics.16.d
+	picture = GFX_handshake_russia2
+
+	is_triggered_only = yes
+
+	option = { #Nice
+		name = generics.16.a
+	}
+}
+
+#Country Refuses
+country_event = {
+	id = generics.17
+	title = generics.17.t
+	desc = generics.17.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Too bad
+		name = generics.17.a
+		create_wargoal = {
+		    type = annex_everything
+		    target = FROM
+		}
+	}
+}
+
+#We Accept (Puppet)
+country_event = {
+	id = generics.18
+	title = generics.18.t
+	desc = generics.18.d
+	picture = GFX_handshake_russia2
+
+	is_triggered_only = yes
+
+	option = { #Okay
+		name = generics.18.a
+		SOV = {
+			country_event = { id = generics.16 days = 1 }
+		}
+	}
+}
+
+#We Refuse (Puppet)
+country_event = {
+	id = generics.19
+	title = generics.19.t
+	desc = generics.19.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Too bad
+		name = generics.19.a
+		SOV = {
+			country_event = { id = generics.17 days = 1 }
+		}
+	}
+}
+
+#Communist Exiles Arrive
+country_event = {
+	id = generics.20
+	title = generics.20.t
+	desc = generics.20.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #Oh
+		name = generics.20.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_war_support = 0.05
+		add_opinion_modifier = {
+			target = SOV
+			modifier = exiled_communist
+		}
+		SOV = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = exiled_communist
+			}
+		}
+	}
+}
+
+#Fascist Women Russia
+country_event = {
+	id = generics.21
+	title = generics.21.t
+	desc = generics.21.d
+	picture = GFX_womens_fascist_march_russia
+
+	is_triggered_only = yes
+
+	option = { #Establish open borders
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 35
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		name = generics.21.a
+		set_country_flag = FROM_opened_manchurian_border
+		if = {
+			limit = {
+				tag = MAN
+				is_subject = yes
+				has_government = fascism
+			}
+			custom_effect_tooltip = might_help_against_japan_tt
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+		diplomatic_relation = {
+			country = SOV
+			relation = military_access
+			active = yes
+		}
+		SOV = {
+			country_event = { id = generics.22 days = 1 }
+			set_country_flag = opened_manchurian_border
+		}
+	}
+
+	option = { #Authorize small exchanges
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 45
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		name = generics.21.b
+		set_country_flag = FROM_small_exchanges_manchurian_border
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		SOV = {
+			country_event = { id = generics.23 days = 1 }
+			set_country_flag = small_exchanges_manchurian_border
+		}
+	}
+
+	option = { #Refuse
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 20
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		name = generics.21.c
+		set_country_flag = FROM_refused_manchurian_border
+		add_stability = -0.1
+		SOV = {
+			country_event = { id = generics.24 days = 1 }
+			set_country_flag = refused_manchurian_border
+		}
+	}
+}
+
+#FROM Accepts Open Borders
+country_event = {
+	id = generics.22
+	title = generics.22.t
+	desc = generics.22.d
+	picture = GFX_handshake_russia2
+
+	is_triggered_only = yes
+
+	option = { #Yay
+		name = generics.22.a
+		diplomatic_relation = {
+			country = FROM
+			relation = military_access
+			active = yes
+		}
+		custom_effect_tooltip = fascist_movement_take_one_year
+	}
+}
+
+#FROM Accepts only small exchanges
+country_event = {
+	id = generics.23
+	title = generics.23.t
+	desc = generics.23.d
+	picture = GFX_cavalry_parade_russia2
+
+	is_triggered_only = yes
+
+	option = { #Uh
+		name = generics.23.a
+		custom_effect_tooltip = fascist_movement_take_two_year
+	}
+}
+
+#FROM Refuses
+country_event = {
+	id = generics.24
+	title = generics.24.t
+	desc = generics.24.d
+	picture = GFX_operation_barbarossa
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #What
+		name = generics.24.a
+		add_state_claim = 761
+		custom_effect_tooltip = fascist_movement_no_transfer
+	}
+}
+
+#25% of the Fascists Exiles transfered
+country_event = {
+	id = generics.25
+	title = generics.25.t
+	desc = generics.25.d
+	picture = GFX_soldiers_parade_russia2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		is_subject = no
+		has_government = fascism
+		OR = {
+			has_country_flag = {
+				flag = opened_manchurian_border
+				days > 91
+			}
+			has_country_flag = {
+				flag = small_exchanges_manchurian_border
+				days > 182
+			}
+		}
+		NOT = {
+			has_country_flag = captured_761_fascist_exiles
+		}
+	}
+
+	option = { #Good
+		name = generics.25.a
+		set_country_flag = SOV_25_percent_fascist_exile
+		unlock_decision_tooltip = SOV_organize_fascist_movement
+	}
+}
+
+#50% of the Fascists Exiles transfered
+country_event = {
+	id = generics.26
+	title = generics.26.t
+	desc = generics.26.d
+	picture = GFX_soldiers_parade_russia2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		is_subject = no
+		has_government = fascism
+		OR = {
+			has_country_flag = {
+				flag = opened_manchurian_border
+				days > 182
+			}
+			has_country_flag = {
+				flag = small_exchanges_manchurian_border
+				days > 365
+			}
+		}
+		NOT = {
+			has_country_flag = captured_761_fascist_exiles
+		}
+	}
+
+	option = { #Good
+		name = generics.26.a
+		set_country_flag = SOV_50_percent_fascist_exile
+		unlock_decision_tooltip = SOV_organize_fascist_movement2
+	}
+}
+
+#75% of the Fascists Exiles transfered
+country_event = {
+	id = generics.27
+	title = generics.27.t
+	desc = generics.27.d
+	picture = GFX_soldiers_parade_russia2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		is_subject = no
+		has_government = fascism
+		OR = {
+			has_country_flag = {
+				flag = opened_manchurian_border
+				days > 273
+			}
+			has_country_flag = {
+				flag = small_exchanges_manchurian_border
+				days > 546
+			}
+		}
+		NOT = {
+			has_country_flag = captured_761_fascist_exiles
+		}
+	}
+
+	option = { #Good
+		name = generics.27.a
+		set_country_flag = SOV_75_percent_fascist_exile
+		unlock_decision_tooltip = SOV_organize_fascist_movement3
+	}
+}
+
+#100% of the Fascists Exiles transfered
+country_event = {
+	id = generics.28
+	title = generics.28.t
+	desc = generics.28.d
+	picture = GFX_soldiers_parade_russia2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		is_subject = no
+		has_government = fascism
+		OR = {
+			has_country_flag = {
+				flag = opened_manchurian_border
+				days > 365
+			}
+			has_country_flag = {
+				flag = small_exchanges_manchurian_border
+				days > 730
+			}
+		}
+		NOT = {
+			has_country_flag = captured_761_fascist_exiles
+		}
+	}
+
+	option = { #Good
+		name = generics.28.a
+		set_country_flag = SOV_100_percent_fascist_exile
+		unlock_decision_tooltip = SOV_organize_fascist_movement4
+	}
+}
+
+#Controls 761
+country_event = {
+	id = generics.29
+	title = generics.29.t
+	desc = generics.29.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		is_subject = no
+		has_government = fascism
+		NOT = {
+			has_country_flag = {
+				flag = opened_manchurian_border
+				days > 365
+			}
+			has_country_flag = {
+				flag = small_exchanges_manchurian_border
+				days > 730
+			}
+			has_country_flag = SOV_100_percent_fascist_exile
+		}
+		OR = {
+			controls_state = 761
+			any_country = {
+				OR = {
+					is_subject_of = SOV
+					is_in_faction_with = SOV
+				}
+				controls_state = 761
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = captured_761_fascist_exiles
+		}
+	}
+
+	option = { #Good
+		name = generics.29.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = SOV_25_percent_fascist_exile
+				}
+			}
+			set_country_flag = SOV_25_percent_fascist_exile
+			unlock_decision_tooltip = SOV_organize_fascist_movement
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = SOV_50_percent_fascist_exile
+				}
+			}
+			set_country_flag = SOV_50_percent_fascist_exile
+			unlock_decision_tooltip = SOV_organize_fascist_movement2
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = SOV_75_percent_fascist_exile
+				}
+			}
+			set_country_flag = SOV_75_percent_fascist_exile
+			unlock_decision_tooltip = SOV_organize_fascist_movement3
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = SOV_100_percent_fascist_exile
+				}
+			}
+			set_country_flag = SOV_100_percent_fascist_exile
+			unlock_decision_tooltip = SOV_organize_fascist_movement4
+		}
+	}
+}
+
+#SOV Help Arrives
+country_event = {
+	id = generics.30
+	title = generics.30.t
+	desc = generics.30.d
+	picture = GFX_report_event_generic_rifles
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = generics.30.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+			producer = SOV #Can't be ROOT, crashes the game
+		}
+		add_opinion_modifier = { target = FROM modifier = russian_help }
+	}
+}
