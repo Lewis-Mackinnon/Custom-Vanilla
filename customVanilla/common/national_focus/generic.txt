@@ -2257,9 +2257,6 @@ focus_tree = {
 				ahead_reduction = 2
 				category = nuclear
 			}
-			hidden_effect = {
-				news_event = { id = news.174 hours = 16 random = 8 }
-			}
 		}
 	}
 
