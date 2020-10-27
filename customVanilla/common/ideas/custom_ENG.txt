@@ -1,0 +1,62 @@
+ideas = {
+	country = {
+		ENG_militarism = {
+			name = ENG_militarism	 		
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				conscription = 0.01
+			}
+        }
+        
+        ENG_colonials = {
+			name = ENG_colonials
+
+			allowed = {
+				original_tag = ENG
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.08
+			}
+        }
+        
+        ENG_propaganda = {
+			name = ENG_propaganda
+			
+			allowed = {
+				original_tag = ENG
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = 0.05
+				conscription = 0.01
+			}
+		}
+	}	
+}

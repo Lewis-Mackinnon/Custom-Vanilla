@@ -1,0 +1,41 @@
+ideas = {
+	country = {
+		RAJ_fading_agrarianism = {
+
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.30
+			}
+		}
+
+		RAJ_agrarianism_past = {
+
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.10
+			}
+		}
+	}	
+}
